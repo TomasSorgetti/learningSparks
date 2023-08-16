@@ -1,0 +1,18 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title{
+    position: relative;
+}
+.title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 70px;
+    width: 134px;
+    height: 20px;
+    z-index: -1;
+    background-color: #1ADDC2;
+}
