@@ -16,3 +16,16 @@
     z-index: -1;
     background-color: #1ADDC2;
 }
+.aboutTitle{
+    position: relative;
+}
+.aboutTitle::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 26px;
+    width: 203px;
+    height: 20px;
+    z-index: -1;
+    background-color: #1ADDC2;
+}
