@@ -11,6 +11,10 @@ module.exports = {
         blueColor: "#845AF7",
         yellowColor: "#FFC600",
       },
+      fontFamily: {
+        poppins: ["Poppins"],
+        manrope: ["Manrope"],
+      },
     },
   },
   plugins: [],

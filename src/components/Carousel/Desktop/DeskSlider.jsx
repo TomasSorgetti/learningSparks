@@ -22,14 +22,14 @@ const DeskSlider = ({ subjects }) => {
     };
     const visibleProjects = getVisibleProjects();
     return (
-      <section className="hidden lg:flex gap-24 justify-center my-20">
+      <section className="font-manrope hidden lg:flex gap-24 justify-center my-20">
         <button onClick={handlePrev}>Prev</button>
         {visibleProjects?.map((subj) => (
           <div key={subj.id} className="flex flex-col gap-2 items-center">
             <div className="bg-yellowColor w-[136px] h-[136px] rounded-[50%] flex items-center justify-center">
               {subj.icon}
             </div>
-            <h6 className="text-[24px] font-extrabold text-titleColor">
+            <h6 className="font-poppins text-[24px] font-extrabold text-titleColor">
               {subj.name}
             </h6>
             <p className="text-[17px] font-normal text-subTitleColor">

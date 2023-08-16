@@ -96,12 +96,12 @@ const Clases = () => {
 
 
   return (
-    <section className="mt-10 flex flex-col items-center">
+    <section className="font-manrope mt-10 flex flex-col items-center">
       <div>
         <img src={Mobile} alt="clases mobile" />
       </div>
       <div className="relative">
-        <h2 className="absolute text-[24px] font-extrabold text-center text-titleColor z-20 top-[-50px] left-[-120px] w-60">
+        <h2 className="font-poppins absolute text-[24px] font-extrabold text-center text-titleColor z-20 top-[-50px] left-[-120px] w-60">
           Clases IB y IGCSE
         </h2>
         <div className="bg-lilaColor w-[216px] h-[50px] absolute top-[-64px] left-[-115px] z-0 rotate-[-6.6deg]"></div>
@@ -118,7 +118,7 @@ const Clases = () => {
 
       <article className="flex flex-col gap-8">
         <div className="w-11/12 m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center">
-          <h4 className="text-[18px] font-extrabold text-subTitleColor">
+          <h4 className="font-poppins text-[18px] font-extrabold text-subTitleColor">
             Clases individuales
           </h4>
           <div>
@@ -154,7 +154,7 @@ const Clases = () => {
           </div>
           <a
             href="#algunlado"
-            className="bg-buttonColor w-auto text-center text-white py-2 px-6 rounded-3xl text-[18px] font-semibold"
+            className="bg-buttonColor font-poppins w-auto text-center text-white py-2 px-6 rounded-3xl text-[18px] font-semibold"
           >
             Consultar
           </a>
@@ -162,7 +162,9 @@ const Clases = () => {
 
         <div className="w-11/12 m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center bg-subTitleColor text-white">
           <div className="flex- flex-col items-center">
-            <h4 className="text-[18px] font-extrabold">Clases grupales</h4>
+            <h4 className="font-poppins text-[18px] font-extrabold">
+              Clases grupales
+            </h4>
             <p className="text-red-500 text-[10px] text-center">
               (3 personas o más)
             </p>
@@ -187,14 +189,14 @@ const Clases = () => {
           </div>
           <div className="flex flex-col items-center justify-center">
             <div className="flex gap-1 items-center justify-center">
-              <h4 className="text-[32px] font-extrabold">€40</h4>
+              <h4 className="font-poppins text-[32px] font-extrabold">€40</h4>
               <p className="text-[20px] mb-[-5px] font-normal">/h</p>
             </div>
             <span>por estudiante</span>
           </div>
           <a
             href="#algunlado"
-            className="bg-buttonColor w-auto text-center text-white py-2 px-6 rounded-3xl text-[18px] font-semibold"
+            className="bg-buttonColor font-poppins w-auto text-center text-white py-2 px-6 rounded-3xl text-[18px] font-semibold"
           >
             Consultar
           </a>
@@ -208,7 +210,7 @@ const Clases = () => {
         <img src={Statue} alt="statue" />
       </article>
       <article className="mt-10 flex flex-col gap-6 items-center w-11/12 text-center">
-        <h3 className="text-[24px] font-extrabold text-subTitleColor">
+        <h3 className="font-poppins text-[24px] font-extrabold text-subTitleColor">
           Elige tu materia
         </h3>
         <p className="text-[17px] font-normal text-textColor leading-7">
