@@ -24,7 +24,7 @@ const MobileSlider = ({ subjects }) => {
   };
   const visibleProjects = getVisibleProjects();
   return (
-    <section className="font-manrope flex gap-10 justify-center my-20 lg:hidden">
+    <section className="font-manrope flex gap-10 justify-center mb-6 lg:hidden">
       <button onClick={handlePrev}>
         <GrPrevious />
       </button>

@@ -1,8 +1,10 @@
 import React from "react";
 import Mobile from "../../assets/mobile/bookmobile.png";
+import book from "../../assets/desktop/book.png"
 import Statue from "../../assets/mobile/Image.png"
+// import StatueDesk from "../../assets/desktop/"
 import MobileSlider from "../Carousel/Mobile/MobileSlider";
-import DeskSlider from "../Carousel/Desktop/DeskSlider";
+// import DeskSlider from "../Carousel/Desktop/DeskSlider";
 
 import { MdDone } from "react-icons/md";
 import { TbMath } from "react-icons/tb";
@@ -96,8 +98,8 @@ const Clases = () => {
 
 
   return (
-    <section className="font-manrope mt-10 flex flex-col items-center">
-      <div>
+    <section className="font-manrope mt-10 flex flex-col items-center lg:mt-40">
+      <div className="lg:hidden">
         <img src={Mobile} alt="clases mobile" />
       </div>
       <div className="relative">
@@ -106,6 +108,9 @@ const Clases = () => {
         </h2>
         <div className="bg-lilaColor w-[216px] h-[50px] absolute top-[-64px] left-[-115px] z-0 rotate-[-6.6deg]"></div>
         <div className="bg-yellowColor w-[216px] h-[50px] absolute top-[-50px] left-[-105px] z-10 rotate-[-3.3deg]"></div>
+      </div>
+      <div className="hidden lg:flex lg:m-auto lg:justify-center lg:mt-10">
+        <img className="w-7/12" src={book} alt="clases desktop book" />
       </div>
       <div className="mt-10 flex flex-col gap-6">
         <h3 className="text-[18px] font-extrabold text-center text-titleColor">
@@ -116,8 +121,8 @@ const Clases = () => {
         </p>
       </div>
 
-      <article className="flex flex-col gap-8">
-        <div className="w-11/12 m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center">
+      <article className="flex flex-col gap-8 lg:flex-row lg:items-center lg:w-8/12 lg:h-[450px]">
+        <div className="w-11/12 m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center lg:m-0 lg:h-full">
           <h4 className="font-poppins text-[18px] font-extrabold text-subTitleColor">
             Clases individuales
           </h4>
@@ -160,7 +165,7 @@ const Clases = () => {
           </a>
         </div>
 
-        <div className="w-11/12 m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center bg-subTitleColor text-white">
+        <div className="w-11/12 m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center bg-subTitleColor text-white lg:h-full">
           <div className="flex- flex-col items-center">
             <h4 className="font-poppins text-[18px] font-extrabold">
               Clases grupales
@@ -201,13 +206,14 @@ const Clases = () => {
             Consultar
           </a>
         </div>
-        <div className="w-11/12 mx-auto h-[3px] my-3 bg-gray-100"></div>
+        <div className="w-11/12 mx-auto h-[3px] my-3 bg-gray-100 lg:hidden"></div>
       </article>
-      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[24px]">
-        <img src={Statue} alt="statue" />
+      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[34px] sm:w-9/12 lg:w-8/12">
+        <img className="sm:w-full sm:object-cover lg:hidden" src={Statue} alt="statue" />
+        <img className="hidden lg:block" src="" alt="" />
       </article>
-      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[24px]">
-        <img src={Statue} alt="statue" />
+      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[34px] sm:w-9/12 lg:w-8/12">
+        <img className="sm:w-full sm:object-cover" src={Statue} alt="statue" />
       </article>
       <article className="mt-10 flex flex-col gap-6 items-center w-11/12 text-center">
         <h3 className="font-poppins text-[24px] font-extrabold text-subTitleColor">
@@ -218,7 +224,7 @@ const Clases = () => {
           Estándar) como en High Level (Nivel Superior).
         </p>
         <MobileSlider subjects={subjects} />
-        <DeskSlider subjects={subjects} />
+        {/* <DeskSlider subjects={subjects} /> */}
       </article>
     </section>
   );

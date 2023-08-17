@@ -11,7 +11,7 @@
     content: "";
     position: absolute;
     bottom: 0;
-    right: 70px;
+    right: 54px;
     width: 134px;
     height: 20px;
     z-index: -1;
@@ -24,9 +24,27 @@
     content: "";
     position: absolute;
     bottom: 0;
-    right: 26px;
-    width: 203px;
+    right: 20px;
+    width: 210px;
     height: 20px;
     z-index: -1;
     background-color: #1ADDC2;
 }
+@media (min-width: 640px) {
+    .title::before{
+        right: 38px;
+    }
+    .aboutTitle::before {
+        right: 190px;
+    }
+}
+@media (min-width: 1024px){
+    .title::before{
+        right: 156px;
+    }
+    .aboutTitle::before {
+        right: 190px;
+    }
+}
+@media (min-width: 1280px){}
+@media (min-width: 1536px){}

@@ -3,7 +3,7 @@ import { FiMail } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 const Contact = () => {
   return (
-    <section className="font-manrope px-6 pt-4 pb-6 my-6 text-white bg-titleColor">
+    <section className="font-manrope px-6 pb-2 pt-4 mt-6 text-white bg-titleColor sm:px-20">
       <h3 className="font-poppins text-[35px] font-extrabold">Contactanos</h3>
       <p className="text-[14px] mb-6 mt-2 leading-5">
         ¿Tenés dudas o consultas? ¿No ves la materia que querés? Mandá tu
