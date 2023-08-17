@@ -46,5 +46,13 @@
         right: 132px;
     }
 }
-@media (min-width: 1280px){}
-@media (min-width: 1536px){}
+@media (min-width: 1280px){
+    .aboutTitle::before {
+        right: 286px;
+    }
+}
+@media (min-width: 1536px){
+    .aboutTitle::before {
+            right: 430px;
+        }
+}

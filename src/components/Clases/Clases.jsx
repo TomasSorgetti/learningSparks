@@ -12,7 +12,7 @@ import { MdDone } from "react-icons/md";
 const Clases = () => {
   return (
     <section className="font-manrope mt-10 flex flex-col items-center lg:mt-40 lg:relative">
-      <div className="hidden lg:absolute lg:top-[-120px] lg:left-0 lg:flex lg:flex-col lg:gap-4">
+      <div className="hidden lg:absolute lg:top-[-120px] lg:left-0 lg:flex lg:flex-col lg:gap-4 xl:top-[-140px]">
         <div className="h-[4px] w-14 bg-subTitleColor"></div>
         <div className="h-[4px] w-14 bg-subTitleColor"></div>
         <div className="h-[4px] w-14 bg-subTitleColor"></div>
@@ -44,7 +44,7 @@ const Clases = () => {
         </p>
       </div>
 
-      <article className="flex flex-col gap-8 lg:flex-row lg:items-center lg:w-8/12 lg:h-[450px]">
+      <article className="flex flex-col gap-8 lg:flex-row lg:items-center lg:w-8/12 lg:h-[450px] 2xl:w-7/12">
         <div className="w-11/12 m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center lg:m-0 lg:h-full">
           <h4 className="font-poppins text-[18px] font-extrabold text-subTitleColor">
             Clases individuales
@@ -131,7 +131,7 @@ const Clases = () => {
         </div>
         <div className="w-11/12 mx-auto h-[3px] my-3 bg-gray-100 lg:hidden"></div>
       </article>
-      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[34px] sm:w-9/12 lg:w-8/12 lg:overflow-hidden lg:rounded-[18px] lg:relative">
+      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[34px] sm:w-9/12 lg:w-8/12 lg:overflow-hidden lg:rounded-[18px] lg:relative  2xl:w-7/12">
         <img
           className="sm:w-full sm:object-cover lg:hidden"
           src={Statue}
@@ -142,12 +142,12 @@ const Clases = () => {
           src={StatueDesk}
           alt="statue"
         />
-        <div className="hidden absolute lg:flex lg:flex-col lg:bottom-10 lg:left-10 text-white">
+        <div className="hidden absolute lg:flex lg:flex-col lg:bottom-10 lg:left-10 text-white 2xl:bottom-16 2xl:left-14">
           <h3 className="text-[56px] font-extrabold">3x2</h3>
           <p className="text-[26px] font-medium">abonando por anticipado</p>
         </div>
       </article>
-      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[34px] sm:w-9/12 lg:w-8/12">
+      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[34px] sm:w-9/12 lg:w-8/12  2xl:w-7/12">
         <img
           className="sm:w-full sm:object-cover lg:hidden"
           src={Statue}
