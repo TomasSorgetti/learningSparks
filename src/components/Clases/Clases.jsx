@@ -1,104 +1,27 @@
 import React from "react";
 import Mobile from "../../assets/mobile/bookmobile.png";
-import book from "../../assets/desktop/book.png"
-import Statue from "../../assets/mobile/Image.png"
-// import StatueDesk from "../../assets/desktop/"
+import book from "../../assets/desktop/book.png";
+import Statue from "../../assets/mobile/Image.png";
+import StatueDesk from "../../assets/desktop/statueDesk.png"
+import article2 from "../../assets/Multimedia/article2.jpg"
 import MobileSlider from "../Carousel/Mobile/MobileSlider";
 // import DeskSlider from "../Carousel/Desktop/DeskSlider";
 
 import { MdDone } from "react-icons/md";
-import { TbMath } from "react-icons/tb";
+
 const Clases = () => {
-    const subjects = [
-      {
-        id: 1,
-        name: "INGLES A y B",
-        text: "IB",
-        icon: <TbMath size="2em" />,
-      },
-      {
-        id: 2,
-        name: "FRANCES",
-        text: "IB/IGCSE",
-        icon: <TbMath size="2em" />,
-      },
-      {
-        id: 3,
-        name: "ESPAÑOL",
-        text: "IB/IGCSE",
-        icon: <TbMath size="2em" />,
-      },
-      {
-        id: 4,
-        name: "HISTORIA",
-        text: "IB",
-        icon: <TbMath size="2em" />,
-      },
-      {
-        id: 5,
-        name: "TEORIA DEL CONOCIMIENTO",
-        text: "IB",
-        icon: <TbMath size="2em" />,
-      },
-      {
-        id: 6,
-        name: "ECONOMIA",
-        text: "IB",
-        icon: <TbMath size="2em" />,
-      },
-      {
-        id: 7,
-        name: "BUSINESS",
-        text: "IB",
-        icon: <TbMath size="2em" />,
-      },
-      {
-        id: 8,
-        name: "BIOLOGIA",
-        text: "IB",
-        icon: <TbMath size="2em" />,
-      },
-      {
-        id: 9,
-        name: "ENVIRONMENTAL SYSTEMS",
-        text: "IB",
-        icon: <TbMath size="2em" />,
-      },
-      {
-        id: 10,
-        name: "SPORTS",
-        text: "IB",
-        icon: <TbMath size="2em" />,
-      },
-      {
-        id: 11,
-        name: "FISICA",
-        text: "IB",
-        icon: <TbMath size="2em" />,
-      },
-      {
-        id: 12,
-        name: "QUIMICA",
-        text: "IB",
-        icon: <TbMath size="2em" />,
-      },
-      {
-        id: 13,
-        name: "MATEMATICA APLICACIONES E INTERPRETACIONES",
-        text: "IB",
-        icon: <TbMath size="2em" />,
-      },
-      {
-        id: 14,
-        name: "MATEMATICA ANALISIS Y ENFOQUES",
-        text: "IB",
-        icon: <TbMath size="2em" />,
-      },
-    ];
-
-
   return (
-    <section className="font-manrope mt-10 flex flex-col items-center lg:mt-40">
+    <section className="font-manrope mt-10 flex flex-col items-center lg:mt-40 lg:relative">
+      <div className="hidden lg:absolute lg:top-[-120px] lg:left-0 lg:flex lg:flex-col lg:gap-4">
+        <div className="h-[4px] w-14 bg-subTitleColor"></div>
+        <div className="h-[4px] w-14 bg-subTitleColor"></div>
+        <div className="h-[4px] w-14 bg-subTitleColor"></div>
+        <div className="h-[4px] w-14 bg-subTitleColor"></div>
+        <div className="h-[4px] w-14 bg-subTitleColor"></div>
+        <div className="h-[4px] w-14 bg-subTitleColor"></div>
+        <div className="h-[4px] w-14 bg-subTitleColor"></div>
+        <div className="h-[4px] w-14 bg-subTitleColor"></div>
+      </div>
       <div className="lg:hidden">
         <img src={Mobile} alt="clases mobile" />
       </div>
@@ -208,23 +131,44 @@ const Clases = () => {
         </div>
         <div className="w-11/12 mx-auto h-[3px] my-3 bg-gray-100 lg:hidden"></div>
       </article>
-      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[34px] sm:w-9/12 lg:w-8/12">
-        <img className="sm:w-full sm:object-cover lg:hidden" src={Statue} alt="statue" />
-        <img className="hidden lg:block" src="" alt="" />
+      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[34px] sm:w-9/12 lg:w-8/12 lg:overflow-hidden lg:rounded-[18px] lg:relative">
+        <img
+          className="sm:w-full sm:object-cover lg:hidden"
+          src={Statue}
+          alt="statue"
+        />
+        <img
+          className="hidden lg:block lg:object-cover"
+          src={StatueDesk}
+          alt="statue"
+        />
+        <div className="hidden absolute lg:flex lg:flex-col lg:bottom-10 lg:left-10 text-white">
+          <h3 className="text-[56px] font-extrabold">3x2</h3>
+          <p className="text-[26px] font-medium">abonando por anticipado</p>
+        </div>
       </article>
       <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[34px] sm:w-9/12 lg:w-8/12">
-        <img className="sm:w-full sm:object-cover" src={Statue} alt="statue" />
+        <img
+          className="sm:w-full sm:object-cover lg:hidden"
+          src={Statue}
+          alt="statue"
+        />
+        <img
+          className="hidden lg:block w-full"
+          src={article2}
+          alt="curso de repaso intensivos"
+        />
       </article>
       <article className="mt-10 flex flex-col gap-6 items-center w-11/12 text-center">
-        <h3 className="font-poppins text-[24px] font-extrabold text-subTitleColor">
+        <h3 className="font-poppins text-[24px] font-extrabold text-subTitleColor ">
           Elige tu materia
         </h3>
-        <p className="text-[17px] font-normal text-textColor leading-7">
+        <p className="text-[17px] font-normal text-textColor leading-7 lg:w-[500px]">
           Todas nuestras clases son impartidas tanto en Standard Level (Nivel
           Estándar) como en High Level (Nivel Superior).
         </p>
-        <MobileSlider subjects={subjects} />
-        {/* <DeskSlider subjects={subjects} /> */}
+        <MobileSlider />
+        {/* <DeskSlider/> */}
       </article>
     </section>
   );

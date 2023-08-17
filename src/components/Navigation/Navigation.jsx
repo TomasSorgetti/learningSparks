@@ -51,7 +51,7 @@ const Navigation = () => {
         </button>
       </div>
       <div
-        className={`w-auto flex flex-col gap-2 items-center lg:flex lg:flex-row lg:items-center lg:justify-end lg:pr-36 lg:w-auto${
+        className={`w-auto font-poppins text-subTitleColor font-medium text-[16px] flex flex-col gap-2 items-center lg:flex lg:flex-row lg:items-center lg:justify-end lg:w-auto lg:pr-10${
           !nav ? " hidden" : ""
         }`}
       >

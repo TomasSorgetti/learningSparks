@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
-
-const MobileSlider = ({ subjects }) => {
+import subjects from "../slider";
+const MobileSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handlePrev = () => {

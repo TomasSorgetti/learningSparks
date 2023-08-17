@@ -43,7 +43,7 @@
         right: 156px;
     }
     .aboutTitle::before {
-        right: 190px;
+        right: 132px;
     }
 }
 @media (min-width: 1280px){}

@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
-
-const DeskSlider = ({ subjects }) => {
+import subjects from '../slider';
+const DeskSlider = () => {
     const [activeIndex, setActiveIndex] = useState(0)
     
     const handlePrev = () => {
