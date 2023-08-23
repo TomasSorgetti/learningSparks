@@ -23,7 +23,7 @@ const Contact = () => {
           </a>
         </div>
       </article>
-      <div className="overflow-hidden w-[800px] 2xl:h-[400px]">
+      <div className="hidden lg:block overflow-hidden w-[800px] 2xl:h-[400px]">
         <img
           className=" object-cover w-full h-full"
           src={contantDesk}

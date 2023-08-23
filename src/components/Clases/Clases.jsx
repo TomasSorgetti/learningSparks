@@ -5,7 +5,7 @@ import Statue from "../../assets/mobile/Image.png";
 import StatueDesk from "../../assets/desktop/statueDesk.png"
 import article2 from "../../assets/Multimedia/article2.jpg"
 import MobileSlider from "../Carousel/Mobile/MobileSlider";
-// import DeskSlider from "../Carousel/Desktop/DeskSlider";
+import DeskSlider from "../Carousel/Desktop/DeskSlider";
 
 import { MdDone } from "react-icons/md";
 
@@ -168,7 +168,7 @@ const Clases = () => {
           Estándar) como en High Level (Nivel Superior).
         </p>
         <MobileSlider />
-        {/* <DeskSlider/> */}
+        <DeskSlider/>
       </article>
     </section>
   );

@@ -7,11 +7,11 @@ const MobileSlider = () => {
 
   const handlePrev = () => {
     setActiveIndex(
-      (prevIndex) => (prevIndex - 1 + subjects.length) % subjects.length
+      (prevIndex) => (prevIndex - 2 + subjects.length) % subjects.length
     );
   };
   const handleNext = () => {
-    setActiveIndex((prevIndex) => prevIndex + 1);
+    setActiveIndex((prevIndex) => prevIndex + 2);
   };
   const getVisibleProjects = () => {
     const startIndex = activeIndex % subjects.length;
@@ -24,16 +24,19 @@ const MobileSlider = () => {
   };
   const visibleProjects = getVisibleProjects();
   return (
-    <section className="font-manrope flex gap-10 justify-center mb-6 lg:hidden">
+    <section className="font-manrope flex gap-4 justify-center mb-6 lg:hidden">
       <button onClick={handlePrev}>
         <GrPrevious />
       </button>
       {visibleProjects?.map((subj) => (
-        <div key={subj.id} className="flex flex-col gap-2 items-center">
+        <div
+          key={subj.id}
+          className="flex flex-col justify-between gap-2 items-center h-[160px] w-[120px]"
+        >
           <div className="bg-yellowColor w-[80px] h-[80px] rounded-[50%] flex items-center justify-center">
             {subj.icon}
           </div>
-          <h6 className="font-poppins text-[14px] font-extrabold text-titleColor">
+          <h6 className="font-poppins  text-[14px] font-extrabold text-titleColor">
             {subj.name}
           </h6>
           <p className="text-[12px] font-normal text-subTitleColor">

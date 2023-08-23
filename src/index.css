@@ -30,6 +30,14 @@
     z-index: -1;
     background-color: #1ADDC2;
 }
+.activePanel{
+    background-color: #1ADDC2;
+}
+.active{
+    opacity: 0.5;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
 @media (min-width: 640px) {
     .title::before{
         right: 38px;

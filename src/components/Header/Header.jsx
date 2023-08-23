@@ -2,7 +2,7 @@ import React from 'react'
 import header from "../../assets/desktop/header.png"
 const Header = () => {
   return (
-    <section className="flex flex-col gap-8 items-center m-auto w-11/12 lg:w-full relative lg:h-[300px] lg:items-start lg:pl-10 lg:gap-5 lg:mb-30 xl:mb-80 xl:pl-16">
+    <section className="flex flex-col gap-8 items-center m-auto w-11/12 lg:w-full relative lg:h-[300px] lg:items-start lg:pl-10 lg:gap-5 lg:mb-30 xl:mb-80 xl:pl-16 2xl:pl-40 2xl:pt-11 2xl:mb-96">
       <h1 className="font-poppins title text-[26px] font-extrabold text-center text-titleColor sm:w-10/12 lg:text-left lg:w-[360px]">
         Clases de apoyo con tutores especializados para IB y IGCSE
       </h1>
@@ -18,7 +18,7 @@ const Header = () => {
         Reservar ahora
       </a>
       <img
-        className="hidden lg:block absolute right-0 top-[-56px] z-[-1]"
+        className="hidden lg:block absolute right-0 top-[-56px] z-[-1] 2xl:h-[560px] 2xl:object-contain "
         src={header}
         alt="header background"
       />
