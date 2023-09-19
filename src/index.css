@@ -38,6 +38,11 @@
     transition: opacity 0.5s, transform 0.5s;
 }
 
+.rotar1{
+    transform: rotateX(45%);
+}
+
+
 @media (min-width: 640px) {
     .title::before{
         right: 38px;

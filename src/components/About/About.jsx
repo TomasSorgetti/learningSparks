@@ -2,7 +2,9 @@ import React from "react";
 import about from "../../assets/desktop/about.png";
 const About = () => {
   return (
-    <section className="font-manrope mx-auto w-11/12 sm:w-9/12 lg:mt-20 lg:flex lg:gap-10 lg:w-10/12 lg:mb-10 xl:w-9/12 3xl:w-8/12">
+    <section
+      id="nosotros"
+      className="font-manrope mx-auto w-11/12 sm:w-9/12 lg:mt-20 lg:flex lg:gap-10 lg:w-10/12 lg:mb-10 xl:w-9/12 3xl:w-8/12">
       <div className="w-11/12 mx-auto h-[3px] my-3 bg-gray-100 lg:hidden"></div>
       <img className="hidden lg:block" src={about} alt="about us" />
       <article>

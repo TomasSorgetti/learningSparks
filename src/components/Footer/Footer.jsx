@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <section className="font-manrope px-4 sm:px-16">
       <article className="flex flex-col gap-6 pb-20 border-b-[1px] border-gray-300 lg:flex-row lg:justify-center lg:pb-24 lg:pt-4 lg:gap-12 xl:gap-20 3xl:justify-around">
-        <div>
+        <a href="#navbar">
           <img
-            className="w-[157px] lg:w-[250px] xl:pt-4 xl:w-[280px]"
+            className="pt-4 w-[157px] lg:w-[250px] lg:pt-4 xl:w-[280px]"
             src={logo}
             alt="logo"
           />
-        </div>
+        </a>
         <div className="flex flex-col gap-10 lg:flex-row lg:pt-16 lg:pl-16 xl:gap-32">
           <div className="text-subTitleColor flex flex-col gap-2">
             <h5 className="text-[1.27rem] font-poppins font-semibold">

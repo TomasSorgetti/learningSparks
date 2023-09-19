@@ -30,34 +30,36 @@ const Navigation = () => {
   return (
     <nav
       id="navbar"
-      className="flex items-center justify-between flex-wrap px-8 lg:flex-row shadow-md mb-14"
+      className={`flex items-center justify-between flex-wrap px-8 lg:flex-row lg:px-10 shadow-md mb-14 `}
     >
       <a href="#navbar">
-        <img src={Logo} alt="learning sparks logo" />
+        <img
+          className="w-[120px] lg:w-[180px] pt-2 pb-4"
+          src={Logo}
+          alt="learning sparks logo"
+        />
       </a>
-      <div className="block lg:hidden">
-        <button
-          onClick={handleClick}
-          className="flex items-center px-3 py-2 border rounded"
-        >
-          <svg
-            className="fill-current h-3 w-3"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </button>
-      </div>
-      <div
-        className={`w-auto font-poppins text-subTitleColor font-medium text-[16px] flex flex-col gap-2 items-center lg:flex lg:flex-row lg:items-center lg:justify-end lg:w-auto lg:pr-10${
-          !nav ? " hidden" : ""
+      <button
+        onClick={handleClick}
+        className={`relative lg:hidden flex flex-col  py-2 w-5 gap-1 ${
+          nav ? "items-start" : "items-end"
         }`}
       >
-        <ul className="flex flex-col justify-center gap-2 lg:flex lg:flex-row lg:gap-4 items-center">
+        <div className={`h-[3px] bg-gray-600 w-[22px]`}></div>
+        <div className={`h-[3px] bg-gray-600 w-[16px]`}></div>
+        <div className={`h-[3px] bg-gray-600 w-[9px]`}></div>
+      </button>
+
+      <div
+        className={`w-full  font-poppins text-subTitleColor font-medium text-[16px] flex flex-col gap-2 items-center lg:flex lg:flex-row lg:items-center lg:justify-end lg:w-auto lg:pr-10 ${
+          !nav ? " hidden " : ""
+        }`}
+      >
+        <ul className={`flex flex-col gap-10 justify-center lg:flex lg:flex-row lg:gap-4 items-center ${nav?"h-screen":""}`}>
           {links?.map(({ id, label, route }) => (
-            <li key={id}>
+            <li
+              onClick={handleClick}
+              key={id}>
               <a href={route}>{label}</a>
             </li>
           ))}

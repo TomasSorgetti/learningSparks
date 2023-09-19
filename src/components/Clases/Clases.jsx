@@ -12,7 +12,9 @@ import { MdDone } from "react-icons/md";
 
 const Clases = () => {
   return (
-    <section className="font-manrope mt-10 flex flex-col items-center lg:mt-40 lg:relative ">
+    <section
+      id="clases"
+      className="font-manrope mt-10 flex flex-col items-center lg:mt-40 lg:relative ">
       <div className="hidden lg:absolute lg:top-[-120px] lg:left-0 lg:flex lg:flex-col lg:gap-4 xl:top-[-140px]">
         <div className="h-[4px] w-14 bg-subTitleColor"></div>
         <div className="h-[4px] w-14 bg-subTitleColor"></div>
@@ -132,9 +134,9 @@ const Clases = () => {
         </div>
         <div className="w-11/12 mx-auto h-[3px] my-3 bg-gray-100 lg:hidden"></div>
       </article>
-      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[46px] sm:w-9/12 md:w-[62%] lg:w-8/12 lg:overflow-hidden lg:rounded-[18px] lg:relative  2xl:w-7/12 2xl:h-[417px] 3xl:w-6/12 4xl:h-[465px] xl:rounded-[30px]">
+      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[30px] sm:w-9/12 md:w-[62%] lg:w-8/12 lg:overflow-hidden lg:rounded-[18px] lg:relative  2xl:w-7/12 2xl:h-[417px] 3xl:w-6/12 4xl:h-[465px] xl:rounded-[30px]">
         <img
-          className="sm:w-full sm:object-cover lg:hidden"
+          className="w-full sm:object-cover lg:hidden"
           src={Statue}
           alt="statue"
         />
@@ -148,9 +150,9 @@ const Clases = () => {
           <p className="text-[26px] font-medium">abonando por anticipado</p>
         </div>
       </article>
-      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[46px] sm:w-9/12 md:w-[62%] lg:w-8/12  2xl:w-7/12 2xl:h-[417px] 3xl:w-6/12 4xl:h-[465px] xl:rounded-[30px]">
+      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[30px] sm:w-9/12 md:w-[62%] lg:w-8/12  2xl:w-7/12 2xl:h-[417px] 3xl:w-6/12 4xl:h-[465px] xl:rounded-[30px]">
         <img
-          className="sm:w-full sm:object-cover lg:hidden"
+          className="w-full sm:object-cover lg:hidden"
           src={article2Mobile}
           alt="statue"
         />
