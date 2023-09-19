@@ -22,7 +22,6 @@ const Header = () => {
         src={header}
         alt="header background"
       />
-      <div className="w-11/12 h-[3px] mt-3 bg-gray-100 lg:hidden"></div>
     </section>
   );
 }

@@ -3,6 +3,7 @@ import Mobile from "../../assets/mobile/bookmobile.png";
 import book from "../../assets/desktop/book.png";
 import Statue from "../../assets/mobile/Image.png";
 import StatueDesk from "../../assets/desktop/statueDesk.png"
+import article2Mobile from "../../assets/mobile/card2.png"
 import article2 from "../../assets/Multimedia/article2.jpg"
 import MobileSlider from "../Carousel/Mobile/MobileSlider";
 import DeskSlider from "../Carousel/Desktop/DeskSlider";
@@ -11,7 +12,7 @@ import { MdDone } from "react-icons/md";
 
 const Clases = () => {
   return (
-    <section className="font-manrope mt-10 flex flex-col items-center lg:mt-40 lg:relative">
+    <section className="font-manrope mt-10 flex flex-col items-center lg:mt-40 lg:relative ">
       <div className="hidden lg:absolute lg:top-[-120px] lg:left-0 lg:flex lg:flex-col lg:gap-4 xl:top-[-140px]">
         <div className="h-[4px] w-14 bg-subTitleColor"></div>
         <div className="h-[4px] w-14 bg-subTitleColor"></div>
@@ -22,7 +23,7 @@ const Clases = () => {
         <div className="h-[4px] w-14 bg-subTitleColor"></div>
         <div className="h-[4px] w-14 bg-subTitleColor"></div>
       </div>
-      <div className="lg:hidden">
+      <div className="lg:hidden mb-[30px]">
         <img src={Mobile} alt="clases mobile" />
       </div>
       <div className="relative">
@@ -44,8 +45,8 @@ const Clases = () => {
         </p>
       </div>
 
-      <article className="flex flex-col gap-8 lg:flex-row lg:items-center lg:w-8/12 lg:h-[450px] 2xl:w-7/12">
-        <div className="w-11/12 m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center lg:m-0 lg:h-full">
+      <article className="flex flex-col gap-8 lg:flex-row lg:items-center lg:w-8/12 lg:h-[450px] 2xl:w-7/12 3xl:w-6/12">
+        <div className="w-11/12 m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center justify-between sm:h-[500px] sm:p-10 lg:m-0 lg:h-full 2xl:py-10">
           <h4 className="font-poppins text-[18px] font-extrabold text-subTitleColor">
             Clases individuales
           </h4>
@@ -88,12 +89,12 @@ const Clases = () => {
           </a>
         </div>
 
-        <div className="w-11/12 m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center bg-subTitleColor text-white lg:h-full">
-          <div className="flex- flex-col items-center">
+        <div className="w-11/12 m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center justify-between bg-subTitleColor text-white sm:h-[500px] sm:p-10 lg:h-full 2xl:py-10">
+          <div className="relative flex- flex-col items-center">
             <h4 className="font-poppins text-[18px] font-extrabold">
               Clases grupales
             </h4>
-            <p className="text-red-500 text-[10px] text-center">
+            <p className="text-red-500 text-[10px] absolute left-8">
               (3 personas o más)
             </p>
           </div>
@@ -131,14 +132,14 @@ const Clases = () => {
         </div>
         <div className="w-11/12 mx-auto h-[3px] my-3 bg-gray-100 lg:hidden"></div>
       </article>
-      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[34px] sm:w-9/12 lg:w-8/12 lg:overflow-hidden lg:rounded-[18px] lg:relative  2xl:w-7/12">
+      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[46px] sm:w-9/12 md:w-[62%] lg:w-8/12 lg:overflow-hidden lg:rounded-[18px] lg:relative  2xl:w-7/12 2xl:h-[417px] 3xl:w-6/12 4xl:h-[465px] xl:rounded-[30px]">
         <img
           className="sm:w-full sm:object-cover lg:hidden"
           src={Statue}
           alt="statue"
         />
         <img
-          className="hidden lg:block lg:object-cover"
+          className="hidden lg:block lg:object-cover 2xl:h-[417px] 4xl:h-[465px]"
           src={StatueDesk}
           alt="statue"
         />
@@ -147,19 +148,19 @@ const Clases = () => {
           <p className="text-[26px] font-medium">abonando por anticipado</p>
         </div>
       </article>
-      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[34px] sm:w-9/12 lg:w-8/12  2xl:w-7/12">
+      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[46px] sm:w-9/12 md:w-[62%] lg:w-8/12  2xl:w-7/12 2xl:h-[417px] 3xl:w-6/12 4xl:h-[465px] xl:rounded-[30px]">
         <img
           className="sm:w-full sm:object-cover lg:hidden"
-          src={Statue}
+          src={article2Mobile}
           alt="statue"
         />
         <img
-          className="hidden lg:block w-full"
+          className="hidden lg:block w-full 4xl:h-[465px]"
           src={article2}
           alt="curso de repaso intensivos"
         />
       </article>
-      <article className="mt-10 flex flex-col gap-6 items-center w-11/12 text-center">
+      <article className="mt-10 flex flex-col gap-6 items-center w-11/12 text-center 3xl:mt-32">
         <h3 className="font-poppins text-[24px] font-extrabold text-subTitleColor ">
           Elige tu materia
         </h3>
@@ -168,7 +169,7 @@ const Clases = () => {
           Estándar) como en High Level (Nivel Superior).
         </p>
         <MobileSlider />
-        <DeskSlider/>
+        <DeskSlider />
       </article>
     </section>
   );

@@ -32,7 +32,12 @@ module.exports = {
 
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
+
       "3xl": "1800px",
+      // => @media (min-width: 1800px) { ... }
+      
+      "4xl": "2000px",
+      // => @media (min-width: 2000px) { ... }
     },
   },
   plugins: [],

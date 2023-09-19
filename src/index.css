@@ -46,6 +46,15 @@
         right: 190px;
     }
 }
+@media (min-width: 768px) {
+    .title::before {
+        right: 190px;
+    }
+
+    .aboutTitle::before {
+        right: 284px;
+    }
+}
 @media (min-width: 1024px){
     .title::before{
         right: 156px;
@@ -56,11 +65,21 @@
 }
 @media (min-width: 1280px){
     .aboutTitle::before {
-        right: 286px;
+        right: 240px;
     }
 }
 @media (min-width: 1536px){
     .aboutTitle::before {
             right: 430px;
+        }
+}
+@media (min-width: 1800px){
+    .aboutTitle::before {
+            right: 480px;
+        }
+}
+@media (min-width: 2000px){
+    .aboutTitle::before {
+            right: 614px;
         }
 }

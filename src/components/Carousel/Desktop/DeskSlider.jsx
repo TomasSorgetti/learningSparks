@@ -35,12 +35,14 @@ const DeskSlider = () => {
         </button>
         <div className="gap-10 flex">
           {visibleProjects?.map((subj) => (
-            <div
+            <a
+              href={`https://api.whatsapp.com/send?phone=${subj.whatsapp}`}
+              target="blank"
               key={subj.id}
               className="flex flex-col gap-2 items-center justify-between"
             >
               <div className="bg-yellowColor w-[120px] h-[120px] rounded-[50%] flex items-center justify-center">
-                {subj.icon}
+                <img src={subj.icon} alt="icon" />
               </div>
               <h6 className="font-poppins text-[24px] font-extrabold text-titleColor w-40 text-center">
                 {subj.name}
@@ -48,7 +50,7 @@ const DeskSlider = () => {
               <p className="text-[17px] font-normal text-subTitleColor">
                 {subj.text}
               </p>
-            </div>
+            </a>
           ))}
         </div>
         <button onClick={handleNext}>

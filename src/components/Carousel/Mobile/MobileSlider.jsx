@@ -29,12 +29,14 @@ const MobileSlider = () => {
         <GrPrevious />
       </button>
       {visibleProjects?.map((subj) => (
-        <div
+        <a
+          href={`https://api.whatsapp.com/send?phone=${subj.whatsapp}`}
+          target='blank'
           key={subj.id}
           className="flex flex-col justify-between gap-2 items-center h-[160px] w-[120px]"
         >
           <div className="bg-yellowColor w-[80px] h-[80px] rounded-[50%] flex items-center justify-center">
-            {subj.icon}
+            <img src={subj.icon} alt="icon" />
           </div>
           <h6 className="font-poppins  text-[14px] font-extrabold text-titleColor">
             {subj.name}
@@ -42,7 +44,7 @@ const MobileSlider = () => {
           <p className="text-[12px] font-normal text-subTitleColor">
             {subj.text}
           </p>
-        </div>
+        </a>
       ))}
       <button onClick={handleNext}>
         <GrNext />
