@@ -21,12 +21,20 @@ const Footer = () => {
             <p>contacto@learning-spark.com</p>
             <p>(+54 9)11-5995-6114</p>
             <div className="flex gap-3">
-              <div className="h-[28px] flex items-center justify-center rounded-full w-[28px] bg-gray-100">
-                <img className="w-[18px]" src={insta} alt="instagram logo" />
-              </div>
-              <div className="h-[28px] flex items-center justify-center rounded-full w-[28px] bg-gray-100">
-                <img className="w-[18px]" src={tiktok} alt="tiktok logo" />
-              </div>
+              <a
+                target="blank"
+                href="https://www.instagram.com/learningspark_/"
+                className="h-[28px] flex items-center justify-center rounded-full w-[28px] bg-gray-100"
+              >
+                <img className="w-[22px]" src={insta} alt="instagram logo" />
+              </a>
+              <a
+                target="blank"
+                href="https://www.tiktok.com/@learning.spark"
+                className="h-[28px] flex items-center justify-center rounded-full w-[28px] bg-gray-100"
+              >
+                <img className="w-[22px]" src={tiktok} alt="tiktok logo" />
+              </a>
             </div>
           </div>
           <div className=" text-subTitleColor">
