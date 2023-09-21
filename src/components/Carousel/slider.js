@@ -121,14 +121,14 @@ import ambientales from "../../assets/Icons/Environment.png";
       id: 15,
       name: "Arte",
       text: "IB",
-      whatsapp: "",
+      whatsapp: "5491139478794",
       icon: arte,
     },
     {
       id: 16,
       name: "Monografía",
       text: "IB",
-      whatsapp: "",
+      whatsapp: "5491139478794",
       icon: historia,
     },
   ];
