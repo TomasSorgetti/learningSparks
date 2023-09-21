@@ -4,15 +4,16 @@ const About = () => {
   return (
     <section
       id="nosotros"
-      className="font-manrope mx-auto w-11/12 sm:w-9/12 lg:mt-20 lg:flex lg:gap-10 lg:w-10/12 lg:mb-10 xl:w-9/12 3xl:w-8/12">
+      className="font-manrope mx-auto w-11/12 sm:w-9/12 lg:mt-20 lg:flex lg:gap-10 lg:w-10/12 lg:mb-10 xl:w-9/12 3xl:w-8/12"
+    >
       <div className="w-11/12 mx-auto h-[3px] my-3 bg-gray-100 lg:hidden"></div>
       <img className="hidden lg:block" src={about} alt="about us" />
       <article>
         <span className="text-[14px] text-subTitleColor font-medium">
           ¿QUIÉNES SOMOS?
         </span>
-        <h3 className="font-poppins aboutTitle text-[26px] mb-5 font-extrabold text-left text-titleColor">
-          Sobre Learning Spark
+        <h3 className="font-poppins text-[26px] mb-5 font-extrabold text-left text-titleColor">
+          Sobre <span className="aboutTitle">Learning Spark</span>
         </h3>
         <img className="w-full lg:hidden" src={about} alt="about us" />
         <div className="flex flex-col gap-2 mt-6 leading-7">

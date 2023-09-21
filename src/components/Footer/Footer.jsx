@@ -31,14 +31,18 @@ const Footer = () => {
           </div>
           <div className=" text-subTitleColor">
             <h5 className="text-[1.27rem] font-poppins font-semibold pb-6">
-              Company
+              Menú
             </h5>
             <ul className="flex flex-col gap-2">
-              <li>About us</li>
-              <li>Blog</li>
-              <li>Contact us</li>
-              <li>Pricing</li>
-              <li>Testimonials</li>
+              <li>
+                <a href="#clases">Clases</a>
+              </li>
+              <li>
+                <a href="#nosotros">Nosotros</a>
+              </li>
+              <li>
+                <a href="#contactanos">Contactanos</a>
+              </li>
             </ul>
           </div>
         </div>

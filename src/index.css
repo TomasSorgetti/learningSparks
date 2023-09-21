@@ -11,7 +11,7 @@
     content: "";
     position: absolute;
     bottom: 0;
-    right: 54px;
+    right: -3px;
     width: 134px;
     height: 20px;
     z-index: -1;
@@ -24,7 +24,7 @@
     content: "";
     position: absolute;
     bottom: 0;
-    right: 20px;
+    right: -5px;
     width: 210px;
     height: 20px;
     z-index: -1;
@@ -43,27 +43,20 @@
 }
 
 
-@media (min-width: 640px) {
+/* @media (min-width: 640px) {
     .title::before{
-        right: 38px;
+    
     }
     .aboutTitle::before {
         right: 190px;
     }
 }
 @media (min-width: 768px) {
-    .title::before {
-        right: 190px;
-    }
-
     .aboutTitle::before {
         right: 284px;
     }
 }
 @media (min-width: 1024px){
-    .title::before{
-        right: 156px;
-    }
     .aboutTitle::before {
         right: 132px;
     }
@@ -87,4 +80,4 @@
     .aboutTitle::before {
             right: 614px;
         }
-}
+} */

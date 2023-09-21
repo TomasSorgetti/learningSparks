@@ -18,11 +18,6 @@ const Navigation = () => {
       label: "Contactanos",
       route:"#contactanos",
     },
-    {
-      id: 4,
-      label: "Blog",
-      route:"blog",
-    },
   ]
   const handleClick = () => {
     setNav(!nav)
