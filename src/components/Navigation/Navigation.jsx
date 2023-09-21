@@ -25,7 +25,7 @@ const Navigation = () => {
   return (
     <nav
       id="navbar"
-      className={`flex items-center justify-between flex-wrap px-8 lg:flex-row lg:px-10 shadow-md mb-14 `}
+      className={`fixed top-0 bg-white w-full z-30 flex items-center justify-between flex-wrap px-8 lg:flex-row lg:px-10 shadow-md mb-14 `}
     >
       <a href="#navbar">
         <img
@@ -50,11 +50,13 @@ const Navigation = () => {
           !nav ? " hidden " : ""
         }`}
       >
-        <ul className={`flex flex-col gap-10 justify-center lg:flex lg:flex-row lg:gap-4 items-center ${nav?"h-screen":""}`}>
+        <ul
+          className={`bg-white flex flex-col gap-10 justify-start pt-10 lg:flex lg:flex-row lg:pt-0 lg:gap-4 items-center lg:h-auto ${
+            nav ? "h-screen" : ""
+          }`}
+        >
           {links?.map(({ id, label, route }) => (
-            <li
-              onClick={handleClick}
-              key={id}>
+            <li className='hover:font-bold' onClick={handleClick} key={id}>
               <a href={route}>{label}</a>
             </li>
           ))}
