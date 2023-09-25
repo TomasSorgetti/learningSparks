@@ -175,11 +175,11 @@ const Clases = () => {
           alt="curso de repaso intensivos"
         />
       </article>
-      <article className="mt-10 flex flex-col gap-6 items-center w-11/12 text-center 3xl:mt-32">
+      <article className="mt-10 flex flex-col gap-6 items-center w-full text-center 3xl:mt-32">
         <h3 className="font-poppins text-[24px] font-extrabold text-subTitleColor ">
           Elige tu materia
         </h3>
-        <p className="text-[17px] font-normal text-textColor leading-7 lg:w-[500px]">
+        <p className="w-11/12 text-[17px] font-normal text-textColor leading-7 lg:w-[500px]">
           Todas nuestras clases son impartidas tanto en Standard Level (Nivel
           Estándar) como en High Level (Nivel Superior).
         </p>
