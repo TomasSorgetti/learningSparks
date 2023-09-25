@@ -95,6 +95,7 @@ const Clases = () => {
             </div>
             <a
               href={`https://api.whatsapp.com/send?phone=${whatsapp}`}
+              target="blank"
               className="bg-buttonColor font-poppins w-auto text-center text-white py-2 px-6 rounded-3xl text-[18px] font-semibold"
             >
               Consultar
@@ -139,6 +140,7 @@ const Clases = () => {
             </div>
             <a
               href={`https://api.whatsapp.com/send?phone=${whatsapp}`}
+              target="blank"
               className="bg-buttonColor font-poppins w-auto text-center text-white py-2 px-6 rounded-3xl text-[18px] font-semibold"
             >
               Consultar
