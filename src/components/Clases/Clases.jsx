@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import Mobile from "../../assets/mobile/bookmobile.png";
 import book from "../../assets/desktop/book.png";
 import fondo from "../../assets/desktop/fondo.png";
@@ -8,11 +8,27 @@ import article2Mobile from "../../assets/mobile/card2.png";
 import article2 from "../../assets/Multimedia/article2.jpg";
 import MobileSlider from "../Carousel/Mobile/MobileSlider";
 import DeskSlider from "../Carousel/Desktop/DeskSlider";
-
+import axios from "axios"
 import { MdDone } from "react-icons/md";
 
 const Clases = () => {
   const whatsapp = "5491139478794";
+  const [userData, setUserData] = useState({})
+  console.log(userData);
+  useEffect(() => {
+    const data = async() => {
+      await axios.get("https://ipapi.co/json/")
+        .then((res) => {
+          if (!res) {
+          console.log("error fetching ip api");
+          }
+          else {
+            setUserData(res.data)
+          }
+      })
+    }
+    data()
+  }, [])
   return (
     <section
       id="clases"
@@ -86,9 +102,15 @@ const Clases = () => {
               </p>
             </div>
             <div className="flex gap-1 items-center justify-center">
-              <h4 className="text-[32px] font-extrabold text-subTitleColor">
-                €60
-              </h4>
+              {userData.country_name !== "Argentina" ? (
+                <h4 className="text-[32px] font-extrabold text-subTitleColor">
+                  $USD 45
+                </h4>
+              ) : (
+                <h4 className="text-[32px] font-extrabold text-subTitleColor">
+                  $15000
+                </h4>
+              )}
               <p className="text-[20px] mb-[-5px] font-normal text-subTitleColor">
                 /h
               </p>
@@ -133,10 +155,18 @@ const Clases = () => {
             </div>
             <div className="flex flex-col items-center justify-center">
               <div className="flex gap-1 items-center justify-center">
-                <h4 className="font-poppins text-[32px] font-extrabold">€40</h4>
+                {userData.country_name !== "Argentina" ? (
+                  <h4 className="font-poppins text-[32px] font-extrabold">
+                    $USD 30
+                  </h4>
+                ) : (
+                  <h4 className="font-poppins text-[32px] font-extrabold">
+                    $ 12000
+                  </h4>
+                )}
                 <p className="text-[20px] mb-[-5px] font-normal">/h</p>
               </div>
-              <span>por estudiante</span>
+              <span className="m-[-10px]">por estudiante</span>
             </div>
             <a
               href={`https://api.whatsapp.com/send?phone=${whatsapp}`}

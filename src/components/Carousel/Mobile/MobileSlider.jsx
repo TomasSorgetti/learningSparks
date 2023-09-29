@@ -24,7 +24,7 @@ const MobileSlider = () => {
   return (
     <motion.div
       ref={carousel}
-      className="w-full overflow-hidden mt-6 lg:hidden"
+      className="w-full overflow-hidden mt-6 lg:hidden pl-6"
       whileTap={{ cursor: "grabbing" }}
     >
       <motion.div

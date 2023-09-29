@@ -29,7 +29,7 @@ const Navigation = () => {
     >
       <a href="#navbar">
         <img
-          className="w-[120px] lg:w-[180px] pt-2 pb-4"
+          className="w-[120px] lg:w-[180px] pt-4 pb-4"
           src={Logo}
           alt="learning sparks logo"
         />
