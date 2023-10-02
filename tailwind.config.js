@@ -8,7 +8,7 @@ module.exports = {
         textColor: "#36314E",
         buttonColor: "#FE3F60",
         lilaColor: "#845AF7",
-        blueColor: "#845AF7",
+        blueColor: "#632AFF",
         yellowColor: "#FFC600",
         greenColor: "#1ADDC2",
       },
@@ -35,7 +35,7 @@ module.exports = {
 
       "3xl": "1800px",
       // => @media (min-width: 1800px) { ... }
-      
+
       "4xl": "2000px",
       // => @media (min-width: 2000px) { ... }
     },

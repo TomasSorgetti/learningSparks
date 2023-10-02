@@ -1,34 +1,33 @@
-import React,{useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Mobile from "../../assets/mobile/bookmobile.png";
 import book from "../../assets/desktop/book.png";
 import fondo from "../../assets/desktop/fondo.png";
 import Statue from "../../assets/mobile/Image.png";
 import StatueDesk from "../../assets/desktop/statueDesk.png";
 import article2Mobile from "../../assets/mobile/card2.png";
-import article2 from "../../assets/Multimedia/article2.jpg";
+import article2 from "../../assets/desktop/repaso.png";
+import linesCard from "../../assets/desktop/linesCard.png";
 import MobileSlider from "../Carousel/Mobile/MobileSlider";
 import DeskSlider from "../Carousel/Desktop/DeskSlider";
-import axios from "axios"
+import axios from "axios";
 import { MdDone } from "react-icons/md";
 
 const Clases = () => {
   const whatsapp = "5491139478794";
-  const [userData, setUserData] = useState({})
+  const [userData, setUserData] = useState({});
   console.log(userData);
   useEffect(() => {
-    const data = async() => {
-      await axios.get("https://ipapi.co/json/")
-        .then((res) => {
-          if (!res) {
+    const data = async () => {
+      await axios.get("https://ipapi.co/json/").then((res) => {
+        if (!res) {
           console.log("error fetching ip api");
-          }
-          else {
-            setUserData(res.data)
-          }
-      })
-    }
-    data()
-  }, [])
+        } else {
+          setUserData(res.data);
+        }
+      });
+    };
+    data();
+  }, []);
   return (
     <section
       id="clases"
@@ -72,7 +71,7 @@ const Clases = () => {
           src={fondo}
           alt="background"
         />
-        <div className="z-10 flex flex-col gap-8 lg:flex-row lg:items-center lg:w-8/12 lg:h-[450px] 2xl:w-7/12 3xl:w-6/12">
+        <div className="z-10 flex flex-col gap-8 lg:flex-row lg:items-center lg:w-9/12 lg:h-[450px] 2xl:w-7/12 3xl:w-6/12">
           <div className="w-11/12 bg-white m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center justify-between sm:h-[500px] sm:p-10 lg:m-0 lg:h-full 2xl:py-10">
             <h4 className="font-poppins text-[18px] font-extrabold text-subTitleColor">
               Clases individuales
@@ -179,36 +178,57 @@ const Clases = () => {
           <div className="w-11/12 mx-auto h-[3px] my-3 bg-gray-100 lg:hidden"></div>
         </div>
       </article>
-      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[30px] sm:w-9/12 md:w-[62%] lg:w-8/12 lg:overflow-hidden lg:rounded-[18px] lg:relative  2xl:w-7/12 2xl:h-[417px] 3xl:w-6/12 4xl:h-[465px] xl:rounded-[30px]">
+      <article className="w-11/12 mx-auto mt-8 bg-blueColor lg:bg-transparent rounded-[26px] sm:rounded-[38px] sm:w-9/12 md:w-[62%] lg:w-9/12 lg:mt-10 lg:relative">
         <img
           className="w-full sm:object-cover lg:hidden"
           src={Statue}
           alt="statue"
         />
         <img
-          className="hidden lg:block lg:object-cover 2xl:h-[417px] 4xl:h-[465px]"
+          className="hidden lg:block w-full"
           src={StatueDesk}
           alt="statue"
         />
-        <div className="hidden absolute lg:flex lg:flex-col lg:bottom-10 lg:left-10 text-white 2xl:bottom-16 2xl:left-14">
+        <div className="absolute lg:flex lg:flex-col lg:bottom-10 lg:left-10 text-white 2xl:bottom-16 2xl:left-14">
           <h3 className="text-[56px] font-extrabold">
-            Get <span className="text-pinkColor">3</span> lessons, pay for{" "}
-            <span className="text-yellowColor">2</span>
+            3x2
           </h3>
           <p className="text-[26px] font-medium">abonando por anticipado</p>
         </div>
       </article>
-      <article className="w-11/12 mx-auto mt-8 bg-blueColor rounded-[30px] sm:w-9/12 md:w-[62%] lg:w-8/12  2xl:w-7/12 2xl:h-[417px] 3xl:w-6/12 4xl:h-[465px] xl:rounded-[30px]">
+      <article className="relative w-11/12 mx-auto mt-8 bg-blueColor lg:bg-transparent rounded-[26px]  sm:rounded-[38px] sm:w-9/12 md:w-[62%] lg:rounded-none lg:h-auto lg:w-9/12 lg:mt-0  2xl:w-7/12 3xl:w-6/12 xl:rounded-[30px]">
         <img
           className="w-full sm:object-cover lg:hidden"
           src={article2Mobile}
           alt="statue"
         />
         <img
-          className="hidden lg:block w-full 4xl:h-[465px]"
+          className="hidden lg:block w-full"
           src={article2}
           alt="curso de repaso intensivos"
         />
+        <div className="text-white absolute top-5 text-center flex flex-col sm:top-14 lg:top-36 lg:right-4 lg:text-start xl:top-52 xl:right-16 2xl:top-44 4xl:top-56 4xl:right-20">
+          <h3
+            className="font-poppins text-[2rem] font-extrabold sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem]
+          "
+          >
+            EE & IA Coaching
+          </h3>
+          <img
+            className="hidden lg:block w-[210px]"
+            src={linesCard}
+            alt="lines decoration"
+          />
+          <p className="text-[1rem] font-medium w-10/12 m-auto leading-6 sm:w-7/12 md:text-[1.1rem] md:leading-8 lg:w-[360px] lg:text-start lg:text-[1.15rem]">
+            Submit your projects, gain insights from expert feedback, and excel
+            in your assessments.
+          </p>
+        </div>
+        <div className="absolute bottom-5 w-full flex justify-center md:bottom-8 lg:bottom-[66%] lg:justify-end">
+          <span className="text-[2rem] text-white font-extrabold font-manrope bg-titleColor w-32 text-center px-1 py-2 rounded">
+            80 USD
+          </span>
+        </div>
       </article>
       <article className="mt-10 flex flex-col gap-6 items-center w-full text-center 3xl:mt-32">
         <h3 className="font-poppins text-[24px] font-extrabold text-subTitleColor ">
