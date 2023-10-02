@@ -107,7 +107,7 @@ const Clases = () => {
                   $USD 45
                 </h4>
               ) : (
-                <h4 className="text-[32px] font-extrabold text-subTitleColor">
+                <h4 className="font-poppins text-[32px] font-extrabold text-subTitleColor">
                   $15000
                 </h4>
               )}
@@ -118,7 +118,7 @@ const Clases = () => {
             <a
               href={`https://api.whatsapp.com/send?phone=${whatsapp}`}
               target="blank"
-              className="bg-buttonColor font-poppins w-auto text-center text-white py-2 px-6 rounded-3xl text-[18px] font-semibold"
+              className="bg-buttonColor hover:bg-[#FE1E45] focus:bg-[#C61130] font-poppins w-auto text-center text-white py-2 px-6 rounded-3xl text-[18px] font-semibold"
             >
               Consultar
             </a>
@@ -171,7 +171,7 @@ const Clases = () => {
             <a
               href={`https://api.whatsapp.com/send?phone=${whatsapp}`}
               target="blank"
-              className="bg-buttonColor font-poppins w-auto text-center text-white py-2 px-6 rounded-3xl text-[18px] font-semibold"
+              className="bg-buttonColor hover:bg-[#FE1E45] focus:bg-[#C61130] font-poppins w-auto text-center text-white py-2 px-6 rounded-3xl text-[18px] font-semibold"
             >
               Consultar
             </a>
@@ -191,7 +191,10 @@ const Clases = () => {
           alt="statue"
         />
         <div className="hidden absolute lg:flex lg:flex-col lg:bottom-10 lg:left-10 text-white 2xl:bottom-16 2xl:left-14">
-          <h3 className="text-[56px] font-extrabold">3x2</h3>
+          <h3 className="text-[56px] font-extrabold">
+            Get <span className="text-pinkColor">3</span> lessons, pay for{" "}
+            <span className="text-yellowColor">2</span>
+          </h3>
           <p className="text-[26px] font-medium">abonando por anticipado</p>
         </div>
       </article>

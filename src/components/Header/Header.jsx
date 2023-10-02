@@ -16,7 +16,7 @@ const Header = () => {
       <a
         href={`https://api.whatsapp.com/send?phone=${whatsapp}`}
         target="blank"
-        className="bg-buttonColor font-poppins  w-auto text-center text-white py-2 px-6 rounded-3xl text-[18px] font-semibold"
+        className="bg-buttonColor hover:bg-[#FE1E45] focus:bg-[#C61130] font-poppins  w-auto text-center text-white py-2 px-6 rounded-3xl text-[18px] font-semibold"
       >
         Reservar ahora
       </a>
