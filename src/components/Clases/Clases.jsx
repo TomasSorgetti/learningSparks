@@ -70,12 +70,14 @@ const Clases = () => {
       </div>
 
       <article className="relative w-full flex justify-center">
-        <img
-          className="hidden lg:block absolute right-0 top-[-40px] object-cover w-[1400px]"
-          src={fondo}
-          alt="background"
-        />
-        <div className="z-10 flex flex-col gap-8 lg:flex-row lg:items-center lg:w-9/12 lg:h-[450px] xl:h-[480px] 2xl:w-7/12 3xl:w-6/12">
+        <div className="w-full overflow-hidden hidden lg:flex absolute right-0 top-[-60px] justify-end 3xl:top-[-30px]">
+          <img
+            className="object-cover 3xl:w-[96%]"
+            src={fondo}
+            alt="background"
+          />
+        </div>
+        <div className="z-10 flex flex-col gap-8 lg:flex-row lg:items-center lg:w-9/12 lg:h-[450px] xl:h-[520px] 2xl:w-7/12 3xl:w-6/12">
           <div className="w-11/12 bg-white m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center justify-between sm:h-[500px] sm:p-10 lg:m-0 lg:h-full 2xl:py-10">
             <h4 className="font-poppins text-[18px] font-extrabold text-subTitleColor xl:text-[1.5rem]">
               Clases individuales
