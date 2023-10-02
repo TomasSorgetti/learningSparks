@@ -15,7 +15,7 @@ const Footer = () => {
         </a>
         <div className="flex flex-col gap-10 lg:flex-row lg:pt-16 lg:pl-16 xl:gap-32">
           <div className="text-subTitleColor flex flex-col gap-2">
-            <h5 className="text-[1.27rem] font-poppins font-semibold">
+            <h5 className="text-[1.25rem] font-poppins font-semibold">
               Contacto
             </h5>
             <p>contacto@learning-spark.com</p>

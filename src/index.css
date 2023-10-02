@@ -37,3 +37,13 @@
     opacity: 0.5;
     transition: opacity 0.5s, transform 0.5s;
 }
+@media screen and (min-width:1280px) {
+    .title::before{
+        width: 220px;
+        height: 30px;
+    }
+    .aboutTitle::before {
+        width: 280px;
+        height: 24px;
+    }
+}

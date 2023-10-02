@@ -12,12 +12,12 @@ const About = () => {
         <span className="text-[14px] text-subTitleColor font-medium">
           ¿QUIÉNES SOMOS?
         </span>
-        <h3 className="font-poppins text-[26px] mb-5 font-extrabold text-left text-titleColor">
+        <h3 className="font-poppins text-[26px] mb-5 font-extrabold text-left text-titleColor xl:text-[2.188rem]">
           Sobre <span className="aboutTitle">Learning Spark</span>
         </h3>
         <img className="w-full lg:hidden" src={about} alt="about us" />
         <div className="flex flex-col gap-2 mt-6 leading-7">
-          <p className="text-[16px] font-normal text-textColor">
+          <p className="text-[1rem] font-normal text-textColor xl:text-[1.063rem]">
             Sabemos lo difícil y estresante que puede ser prepararse para los
             exámenes internacionales y por eso queremos darte la tranquilidad de
             que{" "}
