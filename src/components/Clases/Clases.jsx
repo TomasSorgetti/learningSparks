@@ -214,9 +214,10 @@ const Clases = () => {
         <h3 className="font-poppins text-[24px] font-extrabold text-subTitleColor ">
           Elige tu materia
         </h3>
-        <p className="w-11/12 text-[17px] font-normal text-textColor leading-7 lg:w-[500px]">
+        <p className="w-11/12 text-[17px] font-normal text-textColor leading-7 lg:w-8/12">
           Todas nuestras clases son impartidas tanto en Standard Level (Nivel
-          Estándar) como en High Level (Nivel Superior).
+          Estándar) como en High Level (Nivel Superior), Ofrecemos clases para
+          IB y IGCSE y coaching para tus Extended Essays e Internal Assessments.
         </p>
         <MobileSlider />
         <DeskSlider />

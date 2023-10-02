@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../assets/Logo/Large.png";
-import insta from "../../assets/Logo/insta.png";
-import tiktok from "../../assets/Logo/tiktok.png";
+import insta from "../../assets/Logo/insta.svg";
+import tiktok from "../../assets/Logo/tiktok.svg";
 const Footer = () => {
   return (
     <section className="font-manrope px-4 sm:px-16">
@@ -26,14 +26,14 @@ const Footer = () => {
                 href="https://www.instagram.com/learningspark_/"
                 className="h-[28px] flex items-center justify-center rounded-full w-[28px] bg-gray-100"
               >
-                <img className="w-[22px]" src={insta} alt="instagram logo" />
+                <img className="w-[18px]" src={insta} alt="instagram logo" />
               </a>
               <a
                 target="blank"
                 href="https://www.tiktok.com/@learning.spark"
                 className="h-[28px] flex items-center justify-center rounded-full w-[28px] bg-gray-100"
               >
-                <img className="w-[22px]" src={tiktok} alt="tiktok logo" />
+                <img className="w-[18px]" src={tiktok} alt="tiktok logo" />
               </a>
             </div>
           </div>

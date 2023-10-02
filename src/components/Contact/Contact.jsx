@@ -12,7 +12,7 @@ const Contact = () => {
       <article className="lg:w-[460px] lg:p-16 2xl:pl-36 flex flex-col h-full justify-evenly py-8 2xl:gap-4 3xl:w-[860px]">
         <h3 className="font-poppins text-[24px] font-extrabold">Contactanos</h3>
         <p className="text-[14px] font-normal mb-6 mt-2 leading-5 lg:w-[350px]">
-          ¿Tenés dudas o consultas? ¿No ves la materia que querés? Mandá tu
+          ¿Tienes dudas o consultas? ¿No ves la materia que quieres? Envía tu
           mensaje que te respondemos muy pronto.
         </p>
         <div className="flex flex-col gap-2 font-manrope">
