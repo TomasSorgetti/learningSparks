@@ -3,7 +3,7 @@ import { FiMail } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
 import contantDesk from "../../assets/desktop/contact.png";
-const Contact = () => {
+const Contact = ({t}) => {
   return (
     <section
       id="contactanos"
@@ -11,11 +11,10 @@ const Contact = () => {
     >
       <article className="lg:w-[460px] lg:p-16 2xl:pl-36 flex flex-col h-full justify-evenly py-8 2xl:gap-4 3xl:w-[860px]">
         <h3 className="font-poppins text-[1.5rem] xl:text-[2.188rem] font-extrabold">
-          Contáctanos
+          {t("ContactTitle")}
         </h3>
         <p className="text-[0.875rem] font-normal mb-6 mt-2 leading-5 lg:w-[350px]">
-          ¿Tienes dudas o consultas? ¿No ves la materia que quieres? Envía tu
-          mensaje que te respondemos muy pronto.
+          {t("ContactText")}
         </p>
         <div className="flex flex-col gap-2 font-manrope text-[0.875rem] xl:text-[1.063rem]">
           <span className="flex gap-2 items-center">

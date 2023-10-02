@@ -1,6 +1,6 @@
 import React from "react";
 import about from "../../assets/desktop/about.png";
-const About = () => {
+const About = ({ t }) => {
   return (
     <section
       id="nosotros"
@@ -10,37 +10,33 @@ const About = () => {
       <img className="hidden lg:block" src={about} alt="about us" />
       <article>
         <span className="text-[14px] text-subTitleColor font-medium">
-          ¿QUIÉNES SOMOS?
+          {t("AboutSpan")}
         </span>
         <h3 className="font-poppins text-[26px] mb-5 font-extrabold text-left text-titleColor xl:text-[2.188rem]">
-          Sobre <span className="aboutTitle">Learning Spark</span>
+          {t("AboutTitle1")}{" "}
+          <span className="aboutTitle">{t("AboutTitle2")}</span>
         </h3>
         <img className="w-full lg:hidden" src={about} alt="about us" />
         <div className="flex flex-col gap-2 mt-6 leading-7">
           <p className="text-[1rem] font-normal text-textColor xl:text-[1.063rem]">
-            Sabemos lo difícil y estresante que puede ser prepararse para los
-            exámenes internacionales y por eso queremos darte la tranquilidad de
-            que{" "}
+            {t("AboutText1")}{" "}
             <span className="font-bold text-subTitleColor">
               {" "}
-              podemos ayudarte a alcanzar tu máximo potencial.
+              {t("AboutSpan1")}
             </span>
           </p>
           <p className="text-[16px] font-normal text-textColor">
-            Nuestro equipo de profesionales altamente especializados te guiará
-            en un{" "}
+            {t("AboutText2")}{" "}
             <span className="font-bold text-subTitleColor">
               {" "}
-              ambiente bilingüe{" "}
+              {t("AboutSpan2")}
             </span>{" "}
-            y
+            {t("AboutText3")}
             <span className="font-bold text-subTitleColor">
               {" "}
-              enfocado en los exámenes IB y IGCSE.
+              {t("AboutSpan3")}
             </span>{" "}
-            Prepárate para el éxito con las primeras tutorías especializadas
-            diseñadas exclusivamente para estos desafiantes programas
-            educativos.
+            {t("AboutText4")}
           </p>
         </div>
       </article>

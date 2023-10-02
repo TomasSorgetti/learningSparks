@@ -12,10 +12,10 @@ import DeskSlider from "../Carousel/Desktop/DeskSlider";
 import axios from "axios";
 import { MdDone } from "react-icons/md";
 
-const Clases = () => {
+const Clases = ({t}) => {
   const whatsapp = "5491139478794";
   const [userData, setUserData] = useState({});
-  console.log(userData);
+  
   useEffect(() => {
     const data = async () => {
       await axios.get("https://ipapi.co/json/").then((res) => {
@@ -48,7 +48,7 @@ const Clases = () => {
       </div>
       <div className="relative xl:mb-10">
         <h2 className="font-poppins absolute text-[24px] font-extrabold text-center text-titleColor z-20 top-[-50px] left-[-120px] w-60 xl:text-[3rem] xl:w-[500px] xl:left-[-230px]">
-          Clases IB y IGCSE
+          {t("ClaseTitle")}
         </h2>
         <div className="bg-lilaColor w-[216px] h-[50px] absolute top-[-64px] left-[-115px] z-0 rotate-[-6.6deg] xl:w-[443px] xl:h-[70px] xl:left-[-240px] xl:top-[-80px]"></div>
         <div className="bg-yellowColor w-[216px] h-[50px] absolute top-[-50px] left-[-105px] z-10 rotate-[-3.3deg] xl:w-[443px] xl:h-[82px] xl:left-[-200px] xl:top-[-60px]"></div>
@@ -62,10 +62,10 @@ const Clases = () => {
       </div>
       <div className="mt-10 flex flex-col gap-6 xl:mb-10">
         <h3 className="text-[18px] font-extrabold text-center text-titleColor xl:text-[1.758rem]">
-          ¡Elige tu plan ideal!
+          {t("ClaseSubTitle")}
         </h3>
         <p className="text-[12px] w-8/12 mb-10 m-auto font-normal text-center text-textColor leading-5 xl:text-[1.25rem] xl:leading-8">
-          Clases individuales, grupales, y paquetes con descuento
+          {t("ClaseTitleText")}
         </p>
       </div>
 
@@ -80,30 +80,28 @@ const Clases = () => {
         <div className="z-10 flex flex-col gap-8 lg:flex-row lg:items-center lg:w-9/12 lg:h-[450px] xl:h-[520px] 2xl:w-7/12 3xl:w-6/12">
           <div className="w-11/12 bg-white m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center justify-between sm:h-[500px] sm:p-10 lg:m-0 lg:h-full 2xl:py-10">
             <h4 className="font-poppins text-[18px] font-extrabold text-subTitleColor xl:text-[1.5rem]">
-              Clases individuales
+              {t("Card1Title")}
             </h4>
             <div>
               <div className="flex gap-2 items-center">
                 <MdDone />
                 <h5 className="text-[15px] font-bold text-subTitleColor xl:text-[1.063rem]">
-                  A tu ritmo
+                  {t("Card1Subtitle1")}
                 </h5>
               </div>
               <p className="pl-6 text-[14px] xl:text-[0.875rem]">
-                Diseña un plan de estudio personalizado y avanza según tus
-                metas.
+                {t("Card1Text1")}
               </p>
             </div>
             <div>
               <div className="flex gap-2 items-center">
                 <MdDone />
                 <h5 className="text-[15px] font-bold text-subTitleColor xl:text-[1.063rem]">
-                  Atención individualizada
+                  {t("Card1Subtitle2")}
                 </h5>
               </div>
               <p className="pl-6 text-[14px] xl:text-[0.875rem]">
-                Recibe orientación y retroalimentación enfocada en tus
-                necesidades.
+                {t("Card1Text2")}
               </p>
             </div>
             <div className="flex gap-1 items-center justify-center">
@@ -113,7 +111,7 @@ const Clases = () => {
                 </h4>
               ) : (
                 <h4 className="font-poppins text-[32px] font-extrabold text-subTitleColor xl:text-[3rem]">
-                  $15000
+                  $AR 15000
                 </h4>
               )}
               <p className="text-[20px] mb-[-5px] font-normal text-subTitleColor">
@@ -125,39 +123,39 @@ const Clases = () => {
               target="blank"
               className="bg-buttonColor hover:bg-[#FE1E45] focus:bg-[#C61130] font-poppins w-auto text-center text-white py-2 px-6 rounded-3xl text-[18px] font-semibold"
             >
-              Consultar
+              {t("CardsButton")}
             </a>
           </div>
 
           <div className="w-11/12 m-auto py-8 px-6 border rounded-xl flex flex-col gap-6 items-center justify-between bg-subTitleColor text-white sm:h-[500px] sm:p-10 lg:h-full 2xl:py-10">
             <div className="relative flex- flex-col items-center">
               <h4 className="font-poppins text-[18px] font-extrabold xl:text-[1.5rem]">
-                Clases grupales
+                {t("Card2Title")}
               </h4>
               <p className="text-red-500 text-[10px] absolute left-8 xl:text-[0.75rem]">
-                (3 personas o más)
+                {t("Card2TitleSpan")}
               </p>
             </div>
             <div>
               <div className="flex gap-2 items-center">
                 <MdDone />
                 <h5 className="text-[15px] font-bold xl:text-[1.063rem]">
-                  Aprendizaje interactivo
+                  {t("Card2Subtitle1")}
                 </h5>
               </div>
               <p className="pl-6 text-[14px] xl:text-[0.875rem]">
-                Participa en dinámicas y debates con otros estudiantes.
+                {t("Card2Text1")}
               </p>
             </div>
             <div>
               <div className="flex gap-2 items-center">
                 <MdDone />
                 <h5 className="text-[15px] font-bold xl:text-[1.063rem]">
-                  Descuento por amistad
+                  {t("Card2Subtitle2")}
                 </h5>
               </div>
               <p className="pl-6 text-[14px] xl:text-[0.875rem]">
-                ¡Trae a dos amigos y todos obtendrán un precio especial!
+                {t("Card2Text2")}
               </p>
             </div>
             <div className="flex flex-col items-center justify-center">
@@ -168,19 +166,19 @@ const Clases = () => {
                   </h4>
                 ) : (
                   <h4 className="font-poppins text-[32px] font-extrabold xl:text-[3rem]">
-                    $ 12000
+                    $AR 12000
                   </h4>
                 )}
                 <p className="text-[20px] mb-[-5px] font-normal">/h</p>
               </div>
-              <span className="m-[-10px] xl:text-[1rem]">por estudiante</span>
+              <span className="m-[-10px] xl:text-[1rem]">{t("Card2Span")}</span>
             </div>
             <a
               href={`https://api.whatsapp.com/send?phone=${whatsapp}`}
               target="blank"
               className="bg-buttonColor hover:bg-[#FE1E45] focus:bg-[#C61130] font-poppins w-auto text-center text-white py-2 px-6 rounded-3xl text-[18px] font-semibold"
             >
-              Consultar
+              {t("CardsButton")}
             </a>
           </div>
           <div className="w-11/12 mx-auto h-[3px] my-3 bg-gray-100 lg:hidden"></div>
@@ -239,15 +237,13 @@ const Clases = () => {
       </article>
       <article className="mt-10 flex flex-col gap-6 items-center w-full text-center 3xl:mt-32">
         <h3 className="font-poppins text-[1.5rem] font-extrabold text-subTitleColor xl:text-[2.188rem]">
-          Elige tu materia
+          {t("MateriasTitle")}
         </h3>
         <p className="w-11/12 text-[1.063rem] font-normal text-textColor leading-7 lg:w-8/12">
-          Todas nuestras clases son impartidas tanto en Standard Level (Nivel
-          Estándar) como en High Level (Nivel Superior), Ofrecemos clases para
-          IB y IGCSE y coaching para tus Extended Essays e Internal Assessments.
+          {t("MateriasText")}
         </p>
-        <MobileSlider />
-        <DeskSlider />
+        <MobileSlider t={t} />
+        <DeskSlider t={t} />
       </article>
     </section>
   );

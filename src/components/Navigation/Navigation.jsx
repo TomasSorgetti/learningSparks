@@ -1,33 +1,39 @@
-import React,{useState} from 'react'
-import Logo from "../../assets/Logo/Large.png"
-const Navigation = () => {
-  const [nav, setNav] = useState(false)
+import React, { useState } from "react";
+import Logo from "../../assets/Logo/Large.png";
+import spain from "../../assets/Logo/spain.png"
+import english from "../../assets/Logo/english.png";
+const Navigation = ({ t, i18n }) => {
+  const [nav, setNav] = useState(false);
   const links = [
     {
       id: 1,
-      label: "Clases",
-      route:"#clases",
+      label: t("Clases"),
+      route: "#clases",
     },
     {
       id: 2,
-      label: "Nosotros",
-      route:"#nosotros",
+      label: t("Nosotros"),
+      route: "#nosotros",
     },
     {
       id: 3,
-      label: "Contactanos",
-      route:"#contactanos",
+      label: t("Contactanos"),
+      route: "#contactanos",
     },
-  ]
+  ];
   const handleClick = () => {
-    setNav(!nav)
-  }
+    setNav(!nav);
+  };
+  const changeLanguage = (e) => {
+    const prop = e.target.value;
+    localStorage.setItem("lang", prop);
+    i18n.changeLanguage(prop);
+  };
   return (
     <nav
-      id="navbar"
       className={`fixed top-0 bg-white w-full z-30 flex items-center justify-between flex-wrap px-8 lg:flex-row lg:px-10 shadow-md mb-14 `}
     >
-      <a href="#navbar">
+      <a href="#header">
         <img
           className="w-[120px] lg:w-[180px] pt-4 pb-4"
           src={Logo}
@@ -56,14 +62,21 @@ const Navigation = () => {
           }`}
         >
           {links?.map(({ id, label, route }) => (
-            <li className='hover:font-bold' onClick={handleClick} key={id}>
+            <li className="hover:font-bold" onClick={handleClick} key={id}>
               <a href={route}>{label}</a>
             </li>
           ))}
+          <select onChange={(e) => changeLanguage(e)}>
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+          </select>
+          {/* <div className='flex gap-2 items-center'>
+            <span className='h-4 w-[1px] bg-gray-500'></span>
+          </div> */}
         </ul>
       </div>
     </nav>
   );
-}
+};
 
-export default Navigation
+export default Navigation;

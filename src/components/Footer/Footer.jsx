@@ -2,11 +2,11 @@ import React from "react";
 import logo from "../../assets/Logo/Large.png";
 import insta from "../../assets/Logo/insta.svg";
 import tiktok from "../../assets/Logo/tiktok.svg";
-const Footer = () => {
+const Footer = ({t}) => {
   return (
     <section className="font-manrope px-4 sm:px-16">
       <article className="flex flex-col gap-6 pb-20 border-b-[1px] border-gray-300 lg:flex-row lg:justify-center lg:pb-24 lg:pt-4 lg:gap-12 xl:gap-20 3xl:justify-around">
-        <a href="#navbar">
+        <a href="#header">
           <img
             className="pt-4 w-[157px] lg:w-[250px] lg:pt-4 xl:w-[280px]"
             src={logo}
@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="flex flex-col gap-10 lg:flex-row lg:pt-16 lg:pl-16 xl:gap-32">
           <div className="text-subTitleColor flex flex-col gap-2">
             <h5 className="text-[1.25rem] font-poppins font-semibold">
-              Contacto
+              {t("FooterContactTitle")}
             </h5>
             <p>contacto@learning-spark.com</p>
             <p>(+54 9)11-5995-6114</p>
@@ -39,17 +39,17 @@ const Footer = () => {
           </div>
           <div className=" text-subTitleColor">
             <h5 className="text-[1.27rem] font-poppins font-semibold pb-6">
-              Menú
+              {t("FooterMenuTitle")}
             </h5>
             <ul className="flex flex-col gap-2">
               <li>
-                <a href="#clases">Clases</a>
+                <a href="#clases">{t("Clases")}</a>
               </li>
               <li>
-                <a href="#nosotros">Nosotros</a>
+                <a href="#nosotros">{t("Nosotros")}</a>
               </li>
               <li>
-                <a href="#contactanos">Contactanos</a>
+                <a href="#contactanos">{t("Contactanos")}</a>
               </li>
             </ul>
           </div>
