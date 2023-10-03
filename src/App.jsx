@@ -24,7 +24,7 @@ i18n.use(initReactI18next).init({
           "Access a world of learning right at your fingertips. Expert coaching for extended essays, internal assessments, and exam preparation in Mathematics, Biology, Physics, and more, no matter where you are!",
         HeaderButton: "Book now",
         // Clases
-        ClaseTitle: "IB and IGCSE Lessons",
+        ClaseTitle: "IB & IGCSE Lessons",
         ClaseSubTitle: "Select Your Perfect Study Plan!",
         ClaseTitleText:
           "Customized one-on-one sessions, collaborative group learning, and unbeatable discounts – Your path to exam excellence begins here!",
@@ -69,10 +69,19 @@ i18n.use(initReactI18next).init({
           "We provide top-notch tutoring, customized for these demanding programs, offering personalized guidance every step of the way. Let's embark on an exciting learning journey together!",
         // Contact
         ContactTitle: "Contact us",
-        ContactText: "Do you have any questions or inquiries? Can't find the subject you're looking for? Feel free to reach out by sending us a message, and we'll get back to you promptly. Your academic journey is important to us, and we're here to assist you with a warm and professional touch.",
+        ContactText:
+          "Do you have any questions or inquiries? Can't find the subject you're looking for? Feel free to reach out by sending us a message, and we'll get back to you promptly. Your academic journey is important to us, and we're here to assist you with a warm and professional touch.",
         // Footer
-        FooterContactTitle:"Contact",
-        FooterMenuTitle:"Menu",
+        FooterContactTitle: "Contact",
+        FooterMenuTitle: "Menu",
+        //statue
+        statue2Title1: "Get",
+        statue2Title2: "10",
+        statue2Title3: "lessons, pay for",
+        statue2Title4: "8",
+        statue2Text: "paying in advance",
+        statue3Text:
+          "Submit your projects, gain insights from expert feedback, and excel in your assessments.",
       },
     },
     es: {
@@ -131,10 +140,18 @@ i18n.use(initReactI18next).init({
           "Prepárate para el éxito con las primeras tutorías especializadas diseñadas exclusivamente para estos desafiantes programas educativos.",
         // Contact
         ContactTitle: "Contáctanos",
-        ContactText: "¿Tienes dudas o consultas? ¿No ves la materia que quieres? Envía tu mensaje que te respondemos muy pronto.",
+        ContactText:
+          "¿Tienes dudas o consultas? ¿No ves la materia que quieres? Envía tu mensaje que te respondemos muy pronto.",
         // Footer
-        FooterContactTitle:"Contacto",
-        FooterMenuTitle:"Menú",
+        FooterContactTitle: "Contacto",
+        FooterMenuTitle: "Menú",
+        //statue
+        statue2Title1: "Recibe",
+        statue2Title2: "10",
+        statue2Title3: "lecciones, paga",
+        statue2Title4: "8",
+        statue2Text: "abonando por anticipado",
+        statue3Text: "Envíe sus proyectos, obtenga información de los comentarios de expertos y sobresalga en sus evaluaciones.",
       },
     },
   },

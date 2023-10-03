@@ -193,11 +193,13 @@ const Clases = ({t}) => {
         <img className="hidden lg:block w-full" src={StatueDesk} alt="statue" />
         <div className="absolute text-start lg:flex lg:flex-col top-5 pl-6 text-white sm:top-14 sm:pl-16 lg:bottom-10 lg:left-[-20px] lg:top-auto xl:bottom-16">
           <h3 className="text-[2.2rem] sm:text-[2.8rem] w-11/12 font-poppins font-extrabold xl:text-[3.5rem] lg:w-8/12">
-            Get <span className="text-buttonColor">10</span> lessons, pay for{" "}
-            <span className="text-yellowColor">8</span>
+            {t("statue2Title1")}{" "}
+            <span className="text-buttonColor">{t("statue2Title2")}</span>{" "}
+            {t("statue2Title3")}{" "}
+            <span className="text-yellowColor">{t("statue2Title4")}</span>
           </h3>
           <p className="text-[20px] font-medium xl:text-[1.75rem]">
-            abonando por anticipado
+            {t("statue2Text")}
           </p>
         </div>
       </article>
@@ -225,8 +227,7 @@ const Clases = ({t}) => {
             alt="lines decoration"
           />
           <p className="text-[1rem] font-medium w-10/12 m-auto leading-6 sm:w-7/12 md:text-[1.1rem] md:leading-8 lg:w-[360px] lg:text-start lg:text-[1.15rem]">
-            Submit your projects, gain insights from expert feedback, and excel
-            in your assessments.
+            {t("statue3Text")}
           </p>
         </div>
         <div className="absolute bottom-5 w-full flex justify-center md:bottom-8 lg:bottom-[66%] lg:justify-end">
@@ -239,7 +240,7 @@ const Clases = ({t}) => {
         <h3 className="font-poppins text-[1.5rem] font-extrabold text-subTitleColor xl:text-[2.188rem]">
           {t("MateriasTitle")}
         </h3>
-        <p className="w-11/12 text-[1.063rem] font-normal text-textColor leading-7 lg:w-8/12">
+        <p className="w-11/12 text-[1.063rem] font-normal text-textColor leading-7 lg:w-8/12 max-w-[70ch]">
           {t("MateriasText")}
         </p>
         <MobileSlider t={t} />

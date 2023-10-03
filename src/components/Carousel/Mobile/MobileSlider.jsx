@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from "react";
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
 import subjects from "../slider";
@@ -30,10 +30,9 @@ const MobileSlider = () => {
       <motion.div
         className="w-full h-[250px] flex gap-10 relative"
         drag="x"
-        dragConstraints={{ right: 30, left: -width-50 }}
+        dragConstraints={{ right: 30, left: -width - 50 }}
         dragMomentum={true}
         // dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-        
       >
         {subjects?.map((subj) => (
           <a
@@ -45,12 +44,12 @@ const MobileSlider = () => {
             <div className="bg-yellowColor w-[80px] h-[80px] rounded-[50%] flex items-center justify-center">
               <img src={subj.icon} alt="icon" />
             </div>
-            <h6 className="font-poppins  text-[14px] font-extrabold text-titleColor">
-              {subj.name}
-            </h6>
-            <p className="text-[12px] font-normal text-subTitleColor">
-              {subj.text}
-            </p>
+              <h6 className="font-poppins  text-[14px] font-extrabold text-titleColor">
+                {subj.name}
+              </h6>
+              <p className="text-[12px] font-normal text-subTitleColor">
+                {subj.text}
+              </p>
           </a>
         ))}
       </motion.div>
@@ -58,4 +57,4 @@ const MobileSlider = () => {
   );
 };
 
-export default MobileSlider
+export default MobileSlider;

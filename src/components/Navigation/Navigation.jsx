@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../../assets/Logo/Large.png";
-import spain from "../../assets/Logo/spain.png"
-import english from "../../assets/Logo/english.png";
+// import spain from "../../assets/Logo/spain.png"
+// import english from "../../assets/Logo/english.png";
 const Navigation = ({ t, i18n }) => {
   const [nav, setNav] = useState(false);
   const links = [
@@ -28,6 +28,7 @@ const Navigation = ({ t, i18n }) => {
     const prop = e.target.value;
     localStorage.setItem("lang", prop);
     i18n.changeLanguage(prop);
+    setNav(false)
   };
   return (
     <nav

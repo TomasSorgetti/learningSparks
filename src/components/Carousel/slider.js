@@ -17,7 +17,6 @@ import arte from "../../assets/Icons/arte.png";
 import ambientales from "../../assets/Icons/Environment.png";
 
 
-
   const subjects = [
     {
       id: 1,
