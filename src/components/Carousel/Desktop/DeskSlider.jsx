@@ -44,7 +44,7 @@ const DeskSlider = () => {
               <div className="bg-yellowColor w-[120px] h-[120px] rounded-[50%] flex items-center justify-center">
                 <img src={subj.icon} alt="icon" />
               </div>
-              <h6 className="font-poppins text-[24px] font-extrabold text-titleColor w-40 text-center">
+              <h6 className="uppercase font-poppins text-[1.3rem] font-extrabold text-titleColor w-40 text-center">
                 {subj.name}
               </h6>
               <p className="text-[17px] font-normal text-subTitleColor">

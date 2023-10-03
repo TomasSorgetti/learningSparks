@@ -44,7 +44,7 @@ const MobileSlider = () => {
             <div className="bg-yellowColor w-[80px] h-[80px] rounded-[50%] flex items-center justify-center">
               <img src={subj.icon} alt="icon" />
             </div>
-              <h6 className="font-poppins  text-[14px] font-extrabold text-titleColor">
+              <h6 className="uppercase font-poppins  text-[14px] font-extrabold text-titleColor">
                 {subj.name}
               </h6>
               <p className="text-[12px] font-normal text-subTitleColor">
