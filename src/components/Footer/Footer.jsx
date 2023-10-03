@@ -19,7 +19,7 @@ const Footer = ({t}) => {
               {t("FooterContactTitle")}
             </h5>
             <p>contacto@learning-spark.com</p>
-            <p>(+54 9)11-5995-6114</p>
+            <p>(+54 9)11 3947-8794</p>
             <div className="flex gap-3">
               <a
                 target="blank"
@@ -38,24 +38,24 @@ const Footer = ({t}) => {
             </div>
           </div>
           <div className=" text-subTitleColor">
-            <h5 className="text-[1.27rem] font-poppins font-semibold pb-6">
+            <h5 className="text-[1.27rem] font-poppins font-semibold pb-1">
               {t("FooterMenuTitle")}
             </h5>
             <ul className="flex flex-col gap-2">
               <li>
-                <a href="#clases">{t("Clases")}</a>
+                <a href="#clases" className="hover:font-bold">{t("Clases")}</a>
               </li>
-              <li>
-                <a href="#nosotros">{t("Nosotros")}</a>
+              <li className="relative">
+                <a href="#nosotros" className="hover:font-bold">{t("Nosotros")}</a>
               </li>
-              <li>
-                <a href="#contactanos">{t("Contactanos")}</a>
+              <li className="relative">
+                <a href="#contactanos" className="hover:font-bold absolute">{t("Contactanos")}</a>
               </li>
             </ul>
           </div>
         </div>
       </article>
-      <p className="pt-12 pb-16 text-[0.65rem] font-normal text-subTitleColor lg:text-center">
+      <p className="pt-12 pb-16 text-[0.65rem] font-normal text-subTitleColor lg:text-center xl:text-[0.875rem]">
         ©Copyright 2023. All rights reserved.
       </p>
     </section>

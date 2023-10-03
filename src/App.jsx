@@ -13,7 +13,7 @@ i18n.use(initReactI18next).init({
     en: {
       translation: {
         // Navbar
-        Clases: "Clases",
+        Clases: "Classes",
         Nosotros: "About",
         Contactanos: "Contact",
         // Header
@@ -123,7 +123,7 @@ i18n.use(initReactI18next).init({
         // Materias
         MateriasTitle: "Elige tu materia",
         MateriasText:
-          "Todas nuestras clases son impartidas tanto en Standard Level (Nivel Estándar) como en High Level (Nivel Superior), Ofrecemos clases para IB y IGCSE y coaching para tus Extended Essays e Internal Assessments",
+          "Todas nuestras clases son impartidas tanto en Standard Level (Nivel Medio) como en High Level (Nivel Superior), Ofrecemos clases para IB y IGCSE y coaching para tus Extended Essays e Internal Assessments",
         // About
         AboutSpan: "¿QUIÉNES SOMOS?",
         AboutTitle1: "Sobre",
@@ -151,7 +151,8 @@ i18n.use(initReactI18next).init({
         statue2Title3: "lecciones, paga",
         statue2Title4: "8",
         statue2Text: "abonando por anticipado",
-        statue3Text: "Envíe sus proyectos, obtenga información de los comentarios de expertos y sobresalga en sus evaluaciones.",
+        statue3Text:
+          "Envía tus proyectos, recibe feedback experto y destaca en tus evaluaciones.",
       },
     },
   },

@@ -12,10 +12,10 @@ import DeskSlider from "../Carousel/Desktop/DeskSlider";
 import axios from "axios";
 import { MdDone } from "react-icons/md";
 
-const Clases = ({t}) => {
+const Clases = ({ t }) => {
   const whatsapp = "5491139478794";
   const [userData, setUserData] = useState({});
-  
+
   useEffect(() => {
     const data = async () => {
       await axios.get("https://ipapi.co/json/").then((res) => {
@@ -196,7 +196,7 @@ const Clases = ({t}) => {
           )}`}
         />
         <div className="absolute text-start lg:flex lg:flex-col top-5 pl-6 text-white sm:top-14 sm:pl-16 lg:bottom-10 lg:left-[-20px] lg:top-auto xl:bottom-16">
-          <h3 className="text-[2.2rem] sm:text-[2.8rem] w-11/12 font-poppins font-extrabold xl:text-[3.5rem] lg:w-8/12">
+          <h3 className="text-[2.2rem] sm:text-[2.5rem] w-11/12 font-poppins font-extrabold lg:w-8/12">
             {t("statue2Title1")}{" "}
             <span className="text-buttonColor">{t("statue2Title2")}</span>{" "}
             {t("statue2Title3")}{" "}
@@ -235,9 +235,15 @@ const Clases = ({t}) => {
           </p>
         </div>
         <div className="absolute bottom-5 w-full flex justify-center md:bottom-8 lg:bottom-[66%] lg:justify-end">
-          <span className="text-[2rem] text-white font-extrabold font-manrope bg-titleColor w-32 text-center px-1 py-2 rounded">
-            80 USD
-          </span>
+          {userData.country_name !== "Argentina" ? (
+            <span className="text-[2rem] text-white font-extrabold font-manrope bg-titleColor w-32 text-center px-1 py-2 rounded">
+              80 USD
+            </span>
+          ) : (
+            <span className="text-[2rem] text-white font-extrabold font-manrope bg-titleColor w-52 text-center px-1 py-2 rounded">
+              $AR 30000
+            </span>
+          )}
         </div>
       </article>
       <article className="mt-10 flex flex-col gap-6 items-center w-full text-center 3xl:mt-32">
