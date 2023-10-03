@@ -17,20 +17,20 @@ import arte from "../../assets/Icons/arte.png";
 import ambientales from "../../assets/Icons/Environment.png";
 const andy = "5491139478794";
 const nancy = "5491124076968";
-
+const sonya = "5491132387146";
   const subjects = [
     {
       id: 1,
       name: "MATHEMATICS AA",
       text: "IB",
-      whatsapp: andy,
+      whatsapp: sonya,
       icon: math,
     },
     {
       id: 2,
       name: "MATHEMATICS AI",
       text: "IB",
-      whatsapp: "+5491132387146",
+      whatsapp: andy,
       icon: math,
     },
     {
