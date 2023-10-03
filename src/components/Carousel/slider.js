@@ -15,14 +15,15 @@ import frances from "../../assets/Icons/frances.png";
 import ingles from "../../assets/Icons/ingles.png";
 import arte from "../../assets/Icons/arte.png";
 import ambientales from "../../assets/Icons/Environment.png";
-
+const andy = "5491139478794";
+const nancy = "5491124076968";
 
   const subjects = [
     {
       id: 1,
       name: "MATHEMATICS AA",
       text: "IB",
-      whatsapp: "5491139478794",
+      whatsapp: andy,
       icon: math,
     },
     {
@@ -36,14 +37,14 @@ import ambientales from "../../assets/Icons/Environment.png";
       id: 3,
       name: "History",
       text: "IB",
-      whatsapp: "5491131422725",
+      whatsapp: nancy,
       icon: historia,
     },
     {
       id: 4,
       name: "TOK",
       text: "IB",
-      whatsapp: "5491131422725",
+      whatsapp: nancy,
       icon: tok,
     },
     {
@@ -120,14 +121,14 @@ import ambientales from "../../assets/Icons/Environment.png";
       id: 15,
       name: "Art",
       text: "IB",
-      whatsapp: "5491139478794",
+      whatsapp: andy,
       icon: arte,
     },
     {
       id: 16,
       name: "extended essay",
       text: "IB",
-      whatsapp: "5491139478794",
+      whatsapp: andy,
       icon: historia,
     },
   ];

@@ -44,7 +44,7 @@ const Clases = ({t}) => {
         <div className="h-[4px] w-14 bg-subTitleColor"></div>
       </div>
       <div className="lg:hidden mb-[30px]">
-        <img src={Mobile} alt="clases mobile" />
+        <img src={Mobile} alt={t("ClaseTitle")} />
       </div>
       <div className="relative xl:mb-10">
         <h2 className="font-poppins absolute text-[24px] font-extrabold text-center text-titleColor z-20 top-[-50px] left-[-120px] w-60 xl:text-[3rem] xl:w-[500px] xl:left-[-230px]">
@@ -54,11 +54,7 @@ const Clases = ({t}) => {
         <div className="bg-yellowColor w-[216px] h-[50px] absolute top-[-50px] left-[-105px] z-10 rotate-[-3.3deg] xl:w-[443px] xl:h-[82px] xl:left-[-200px] xl:top-[-60px]"></div>
       </div>
       <div className="hidden lg:flex lg:m-auto lg:justify-center lg:mt-10">
-        <img
-          className="w-7/12 xl:w-[600px]"
-          src={book}
-          alt="clases desktop book"
-        />
+        <img className="w-7/12 xl:w-[600px]" src={book} alt={t("ClaseTitle")} />
       </div>
       <div className="mt-10 flex flex-col gap-6 xl:mb-10">
         <h3 className="text-[18px] font-extrabold text-center text-titleColor xl:text-[1.758rem]">
@@ -188,9 +184,17 @@ const Clases = ({t}) => {
         <img
           className="w-full sm:object-cover lg:hidden"
           src={Statue}
-          alt="statue"
+          alt={`${t("statue2Title1")} ${t("statue2Title2")} ${t(
+            "statue2Title3"
+          )}`}
         />
-        <img className="hidden lg:block w-full" src={StatueDesk} alt="statue" />
+        <img
+          className="hidden lg:block w-full"
+          src={StatueDesk}
+          alt={`${t("statue2Title1")} ${t("statue2Title2")} ${t(
+            "statue2Title3"
+          )}`}
+        />
         <div className="absolute text-start lg:flex lg:flex-col top-5 pl-6 text-white sm:top-14 sm:pl-16 lg:bottom-10 lg:left-[-20px] lg:top-auto xl:bottom-16">
           <h3 className="text-[2.2rem] sm:text-[2.8rem] w-11/12 font-poppins font-extrabold xl:text-[3.5rem] lg:w-8/12">
             {t("statue2Title1")}{" "}
@@ -207,12 +211,12 @@ const Clases = ({t}) => {
         <img
           className="w-full sm:object-cover lg:hidden"
           src={article2Mobile}
-          alt="statue"
+          alt={t("statue3Text")}
         />
         <img
           className="hidden lg:block w-full"
           src={article2}
-          alt="curso de repaso intensivos"
+          alt={t("statue3Text")}
         />
         <div className="text-white absolute top-5 text-center flex flex-col sm:top-14 lg:top-36 lg:right-4 lg:text-start xl:top-52 xl:right-16 2xl:top-44 4xl:top-56 4xl:right-20">
           <h3

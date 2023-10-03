@@ -24,7 +24,7 @@ const Header = ({t}) => {
       <img
         className="hidden lg:block absolute right-0 top-[-56px] z-[-1] 2xl:h-[560px] 2xl:object-contain "
         src={header}
-        alt="header background"
+        alt={`${t("HeaderTitle1")} ${t("HeaderTitle2")} ${t("HeaderTitle3")}`}
       />
     </section>
   );

@@ -31,7 +31,7 @@ const Contact = ({t}) => {
         <img
           className=" object-cover w-full h-full"
           src={contantDesk}
-          alt="contact decoration"
+          alt={t("ContactText")}
         />
       </div>
     </section>
