@@ -24,11 +24,11 @@ const Navigation = ({ t, i18n }) => {
   const handleClick = () => {
     setNav(!nav);
   };
-  const changeLanguage = (e) => {
-    const prop = e.target.value;
+  const changeLanguage = (e, prop) => {
+    e.preventDefault();
     localStorage.setItem("lang", prop);
     i18n.changeLanguage(prop);
-    setNav(false)
+    setNav(false);
   };
   return (
     <nav
@@ -67,10 +67,25 @@ const Navigation = ({ t, i18n }) => {
               <a href={route}>{label}</a>
             </li>
           ))}
-          <select onChange={(e) => changeLanguage(e)}>
+          <div className="flex gap-2 items-center">
+            <button
+              onClick={(e) => changeLanguage(e, "es")}
+              className={i18n.language === "es" ? "font-extrabold" : ""}
+            >
+              ES
+            </button>
+            <div className="h-4 w-[1px] bg-gray-500"></div>
+            <button
+              onClick={(e) => changeLanguage(e, "en")}
+              className={i18n.language === "en" ? "font-extrabold" : ""}
+            >
+              EN
+            </button>
+          </div>
+          {/* <select onChange={(e) => changeLanguage(e)}>
             <option value="en">EN</option>
             <option value="es">ES</option>
-          </select>
+          </select> */}
           {/* <div className='flex gap-2 items-center'>
             <span className='h-4 w-[1px] bg-gray-500'></span>
           </div> */}
