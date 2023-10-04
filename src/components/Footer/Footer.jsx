@@ -2,7 +2,8 @@ import React from "react";
 import logo from "../../assets/Logo/Large.png";
 import insta from "../../assets/Logo/insta.svg";
 import tiktok from "../../assets/Logo/tiktok.svg";
-const Footer = ({t}) => {
+const Footer = ({ t }) => {
+  const whatsapp = "5491139478794";
   return (
     <section className="font-manrope px-4 sm:px-16">
       <article className="flex flex-col gap-6 pb-20 border-b-[1px] border-gray-300 lg:flex-row lg:justify-center lg:pb-24 lg:pt-4 lg:gap-12 xl:gap-20 3xl:justify-around">
@@ -18,8 +19,15 @@ const Footer = ({t}) => {
             <h5 className="text-[1.25rem] font-poppins font-semibold">
               {t("FooterContactTitle")}
             </h5>
-            <p>contacto@learning-spark.com</p>
-            <p>(+54 9)11 3947-8794</p>
+            <a href="mailto:contacto@learning-spark.com" target="blank">
+              contacto@learning-spark.com
+            </a>
+            <a
+              href={`https://api.whatsapp.com/send?phone=${whatsapp}`}
+              target="blank"
+            >
+              (+54 9)11 3947-8794
+            </a>
             <div className="flex gap-3">
               <a
                 target="blank"
@@ -43,13 +51,19 @@ const Footer = ({t}) => {
             </h5>
             <ul className="flex flex-col gap-2">
               <li>
-                <a href="#clases" className="hover:font-bold">{t("Clases")}</a>
+                <a href="#clases" className="hover:font-bold">
+                  {t("Clases")}
+                </a>
+              </li>
+              <li>
+                <a href="#nosotros" className="hover:font-bold">
+                  {t("Nosotros")}
+                </a>
               </li>
               <li className="relative">
-                <a href="#nosotros" className="hover:font-bold">{t("Nosotros")}</a>
-              </li>
-              <li className="relative">
-                <a href="#contactanos" className="hover:font-bold absolute">{t("Contactanos")}</a>
+                <a href="#contactanos" className="hover:font-bold absolute">
+                  {t("Contactanos")}
+                </a>
               </li>
             </ul>
           </div>

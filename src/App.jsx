@@ -79,7 +79,7 @@ i18n.use(initReactI18next).init({
         statue2Title2: "10",
         statue2Title3: "lessons, pay for",
         statue2Title4: "8",
-        statue2Text: "paying in advance",
+        statue2Text: "with upfront payment!",
         statue3Text:
           "Submit your projects, gain insights from expert feedback, and excel in your assessments.",
       },

@@ -3,7 +3,8 @@ import { FiMail } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
 import contantDesk from "../../assets/desktop/contact.png";
-const Contact = ({t}) => {
+const Contact = ({ t }) => {
+  const whatsapp = "5491139478794";
   return (
     <section
       id="contactanos"
@@ -17,14 +18,22 @@ const Contact = ({t}) => {
           {t("ContactText")}
         </p>
         <div className="flex flex-col gap-2 font-manrope text-[0.875rem] xl:text-[1.063rem]">
-          <span className="flex gap-2 items-center">
+          <a
+            href="mailto:contacto@learning-spark.com"
+            target="blank"
+            className="flex gap-2 items-center"
+          >
             <FiMail color="#1ADDC2" />
             <p>contacto@learning-spark.com</p>
-          </span>
-          <span className="flex gap-2 items-center">
+          </a>
+          <a
+            href={`https://api.whatsapp.com/send?phone=${whatsapp}`}
+            target="blank"
+            className="flex gap-2 items-center"
+          >
             <FaWhatsapp color="#1ADDC2" />
             <p>(+54 9)11-3947-8794</p>
-          </span>
+          </a>
         </div>
       </article>
       <div className="hidden lg:block overflow-hidden w-[800px] 2xl:h-[400px] 3xl:w-full">
