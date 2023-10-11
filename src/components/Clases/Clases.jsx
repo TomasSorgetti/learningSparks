@@ -218,7 +218,7 @@ const Clases = ({ t }) => {
           src={article2}
           alt={t("statue3Text")}
         />
-        <div className="text-white absolute top-5 text-center flex flex-col sm:top-14 lg:top-36 lg:right-4 lg:text-start xl:top-52 xl:right-16 2xl:top-44 4xl:top-56 4xl:right-20">
+        <div className="text-white absolute top-5 text-center flex flex-col sm:top-14 lg:top-40 lg:right-4 lg:text-start xl:top-56 xl:right-16 2xl:top-52 4xl:top-60 4xl:right-20">
           <h3
             className="font-poppins text-[2rem] font-extrabold sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem]
           "

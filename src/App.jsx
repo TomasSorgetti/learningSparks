@@ -53,7 +53,7 @@ i18n.use(initReactI18next).init({
         MateriasText:
           "Our tutors specialize in both High Level (HL) and Standard Level (SL) subjects. Additionally, we provide expert coaching to enhance your Extended Essays and offer dedicated assistance for Internal Assessments. Your path to IB success begins here, with personalized guidance every step of the way.",
         // About
-        AboutSpan: "¿WHO WE ARE?",
+        AboutSpan: "WHO WE ARE",
         AboutTitle1: "About ",
         AboutTitle2: "Learning Spark",
         AboutText1:
@@ -62,7 +62,7 @@ i18n.use(initReactI18next).init({
         AboutText2:
           "Our team of specialized tutors is dedicated to making this journey enjoyable and effortless.",
         AboutSpan2:
-          "Join our tailored classes in English or Spanish, designed for IB (international baccalaureate)",
+          "Join our tailored classes in English or Spanish, designed for IB (International Baccalaureate)",
         AboutText3: "and",
         AboutSpan3: "IGCSE exam success.",
         AboutText4:
@@ -70,7 +70,7 @@ i18n.use(initReactI18next).init({
         // Contact
         ContactTitle: "Contact us",
         ContactText:
-          "Do you have any questions or inquiries? Can't find the subject you're looking for? Feel free to reach out by sending us a message, and we'll get back to you promptly. Your academic journey is important to us, and we're here to assist you with a warm and professional touch.",
+          "Do you have any questions or enquiries? Can't find the subject you're looking for? Feel free to reach out by sending us a message, and we'll get back to you promptly. Your academic journey is important to us, and we're here to assist you with a warm and professional touch.",
         // Footer
         FooterContactTitle: "Contact",
         FooterMenuTitle: "Menu",

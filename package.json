@@ -1,5 +1,6 @@
 {
   "name": "learningsparks",
+  "homepage": "https://learning-spark.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

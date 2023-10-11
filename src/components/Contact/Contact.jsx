@@ -24,7 +24,7 @@ const Contact = ({ t }) => {
             className="flex gap-2 items-center"
           >
             <FiMail color="#1ADDC2" />
-            <p>contacto@learning-spark.com</p>
+            <p className="w">contacto@learning-spark.com</p>
           </a>
           <a
             href={`https://api.whatsapp.com/send?phone=${whatsapp}`}
