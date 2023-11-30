@@ -18,6 +18,7 @@ import ambientales from "../../assets/Icons/Environment.png";
 const andy = "5491139478794";
 const nancy = "5491124076968";
 const sonya = "5491132387146";
+
   const subjects = [
     {
       id: 1,
