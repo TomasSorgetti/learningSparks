@@ -7,8 +7,8 @@ import "react-quill/dist/quill.snow.css";
 const DashboardNewBlog = () => {
   const [data, setData] = useState({
     text: "",
-    image: "",
-    card_image: "",
+    image: null,
+    card_image: null,
     card_title: "",
     card_text: "",
   });
@@ -21,24 +21,32 @@ const DashboardNewBlog = () => {
   const token = localStorage.getItem("token");
   const handleSend = async () => {
     const URL = "http://localhost:3001/posts";
-    try {
-      await axios
-        .post(URL, data, {
-          headers: {
-            authorization: `${token}`,
-          },
-        })
-        .then((res) => {
-          console.log(res);
-        });
-    } catch (error) {
-      console.log("error at create post", error);
+    if (data.text && data.card_text && data.card_title) {
+      try {
+        await axios
+          .post(URL, data, {
+            headers: {
+              authorization: `${token}`,
+            },
+          })
+          .then((res) => {
+            console.log(res);
+          });
+      } catch (error) {
+        console.log("error at create post", error);
+      }
     }
   };
 
   return (
     <div className="flex flex-col items-center gap-10 w-full">
-      <input type="file" name="image" value={data.image} />
+      <input
+        className="w-full h-[440px] bg-gray-300"
+        type="file"
+        name="image"
+        value={data.image}
+      />
+
       <EditorComponent setData={setData} data={data} />
       <section className="flex gap-20 mt-20">
         <div className="blog-card flex flex-col font-poppins blogCard h-[550px] w-[400px] rounded-[10px] bg-subTitleColor text-white">

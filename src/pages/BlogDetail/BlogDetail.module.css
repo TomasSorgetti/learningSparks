@@ -16,3 +16,16 @@
     font-weight: 600;
     color: #00ABC2;
 }
+.dataText ul {
+    margin-left: 20px;
+}
+
+.dataText ul li::before {
+    content: "\2022";
+    color: #FE3F60;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+
+}
