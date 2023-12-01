@@ -1,3 +1,18 @@
 .quill{
     height: 400px;
+    color: #211842;
+}
+.quill h1{
+    text-align: center;
+    font-size: 3.75rem !important;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.quill p{
+    font-size: 2rem !important;
+    font-weight: 300;
+}
+.quill p strong, .quill p a {
+    font-weight: 600;
+    color: #00ABC2;
 }

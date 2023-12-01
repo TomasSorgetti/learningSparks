@@ -34,7 +34,7 @@ const DashboardLogin = () => {
   };
 
   return (
-    <section>
+    <section className="w-full h-[100dvh]">
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="">Email</label>
