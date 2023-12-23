@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import Navigation from "../../components/Navigation/Navigation";
 import Footer from "../../components/Footer/Footer";
-
+import { URl_BASE } from "../../utils/url";
 
 const BlogDetail = () => {
   const { t } = useTranslation();
@@ -14,7 +14,7 @@ const BlogDetail = () => {
   const [data, setData] = useState({});
   useEffect(() => {
     const fetchData = async () => {
-      const URL = `http://localhost:3001/posts/${id}`;
+      const URL = `${URl_BASE}/posts/${id}`;
       try {
         await axios.get(URL).then((response) => {
           setData(response.data);

@@ -11,20 +11,30 @@ import MobileSlider from "../Carousel/Mobile/MobileSlider";
 import DeskSlider from "../Carousel/Desktop/DeskSlider";
 import axios from "axios";
 import { MdDone } from "react-icons/md";
+import { URl_BASE } from "../../utils/url";
 
 const Clases = ({ t }) => {
   const whatsapp = "5491139478794";
   const [userData, setUserData] = useState({});
-
+  const postIp = async (ip) => {
+    try {
+      await axios.post(`${URl_BASE}/views/${ip}`);
+    } catch (error) {
+      console.log("error posting ip", error);
+    }
+  };
   useEffect(() => {
     const data = async () => {
-      await axios.get("https://ipapi.co/json/").then((res) => {
-        if (!res) {
-          console.log("error fetching ip api");
-        } else {
-          setUserData(res.data);
-        }
-      });
+      try {
+        await axios.get("https://ipapi.co/json/").then((res) => {
+          if (res) {
+            setUserData(res.data);
+            postIp(res.data.ip);
+          }
+        });
+      } catch (error) {
+        console.log("error fetching ip api", error);
+      }
     };
     data();
   }, []);

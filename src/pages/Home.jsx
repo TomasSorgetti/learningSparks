@@ -1,5 +1,4 @@
 import React from 'react'
-import i18n from "i18next";
 import About from '../components/About/About';
 import Clases from '../components/Clases/Clases';
 import Header from '../components/Header/Header';

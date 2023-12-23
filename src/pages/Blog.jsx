@@ -7,13 +7,14 @@ import Footer from "../components/Footer/Footer"
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 import BlogCard from "../components/Dashboard/Card/BlogCard";
-
+import { URl_BASE } from "../utils/url";
 const Blog = () => {
   const { t } = useTranslation();
   const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
-      const URL = "http://localhost:3001/posts";
+      const URL = `${URl_BASE}/posts`;
       try {
         await axios.get(URL).then((res) => {
           if (res) {
@@ -22,6 +23,7 @@ const Blog = () => {
         });
       } catch (error) {
         console.log("error fetching blogs data", error);
+        setLoading(false)
       }
     };
     fetchData();
@@ -42,9 +44,11 @@ const Blog = () => {
       </h1>
       <div className="p-20 flex flex-wrap gap-6 justify-center">
         {data ? (
-          data?.map((item) => <BlogCard key={item.id} data={item} />)
+          data.map((item) => <BlogCard key={item.id} data={item} />)
+        ) : loading ? (
+          <div>Loading</div>
         ) : (
-          <div>Problem with the posts</div>
+          <div>Error. Try again later...</div>
         )}
       </div>
       <Footer t={t} />

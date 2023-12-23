@@ -1,28 +1,43 @@
 import React, { useState } from "react";
 import Logo from "../../assets/Logo/Large.png";
+import {Link} from "react-router-dom"
 // import spain from "../../assets/Logo/spain.png"
 // import english from "../../assets/Logo/english.png";
 const Navigation = ({ t, i18n }) => {
   const [nav, setNav] = useState(false);
+  const token = localStorage.getItem("token")
   const links = [
+    // {
+    //   id: 1,
+    //   label: t("Clases"),
+    //   route: "/#clases",
+    // },
+    // {
+    //   id: 2,
+    //   label: t("Nosotros"),
+    //   route: "/#nosotros",
+    // },
+    // {
+    //   id: 3,
+    //   label: t("Contactanos"),
+    //   route: "/#contactanos",
+    // },
     {
-      id: 1,
-      label: t("Clases"),
-      route: "#clases",
+      id: 4,
+      label: "Home",
+      route: "/",
     },
     {
-      id: 2,
-      label: t("Nosotros"),
-      route: "#nosotros",
-    },
-    {
-      id: 3,
-      label: t("Contactanos"),
-      route: "#contactanos",
+      id: 5,
+      label: "Blog",
+      route: "/blog",
     },
   ];
   const handleClick = () => {
     setNav(!nav);
+  };
+  const handleLogout = () => {
+    localStorage.removeItem("token")
   };
   const changeLanguage = (e, prop) => {
     e.preventDefault();
@@ -63,10 +78,20 @@ const Navigation = ({ t, i18n }) => {
           }`}
         >
           {links?.map(({ id, label, route }) => (
-            <li className="hover:font-bold" onClick={handleClick} key={id}>
-              <a href={route}>{label}</a>
-            </li>
+            <Link
+              to={route}
+              className="hover:font-bold"
+              onClick={handleClick}
+              key={id}
+            >
+              {label}
+            </Link>
           ))}
+          {typeof token === "string" ? (
+            <button onClick={handleLogout}>Logout</button>
+          ) : (
+            <Link to="/login">Login</Link>
+          )}
           <div className="flex gap-2 items-center">
             <button
               onClick={(e) => changeLanguage(e, "es")}
@@ -82,13 +107,6 @@ const Navigation = ({ t, i18n }) => {
               EN
             </button>
           </div>
-          {/* <select onChange={(e) => changeLanguage(e)}>
-            <option value="en">EN</option>
-            <option value="es">ES</option>
-          </select> */}
-          {/* <div className='flex gap-2 items-center'>
-            <span className='h-4 w-[1px] bg-gray-500'></span>
-          </div> */}
         </ul>
       </div>
     </nav>

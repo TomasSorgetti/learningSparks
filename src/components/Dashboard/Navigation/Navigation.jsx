@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Navigation = () => {
     const navigate = useNavigate()
@@ -8,11 +8,14 @@ const Navigation = () => {
         navigate("/dashboard")
     }
   return (
-      <div>
-          <h1>logo</h1>
-        <button onClick={handleLogOut}>Logout</button>
-      </div>
-  )
+    <div>
+      <h1>logo</h1>
+      <Link to="/home">Home</Link>
+      <Link to="/users">Users</Link>
+      <Link to="/add-new-blog">Add New Blog</Link>
+      <button onClick={handleLogOut}>Logout</button>
+    </div>
+  );
 }
 
 export default Navigation

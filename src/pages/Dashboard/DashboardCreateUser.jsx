@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { URl_BASE } from "../../utils/url";
 
 const DashboardCreateUser = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const DashboardCreateUser = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const URL = "http://localhost:3001/user";
+    const URL = `${URl_BASE}/user`;
     if (
       form.name &&
       form.email &&
@@ -40,46 +41,66 @@ const DashboardCreateUser = () => {
     }
   };
   return (
-    <section>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="">Name</label>
-          <input
-            type="text"
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-          />
+    <section className="w-full h-[100dvh] flex items-center justify-center text-white font-poppins">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-subTitleColor w-[524px] h-[690px] px-16 py-10 rounded-2xl text-center flex flex-col justify-between items-center"
+      >
+        <div className="w-full flex flex-col gap-2">
+          <h1 className="text-[2.5rem] font-semibold">Create user</h1>
+          <div className="flex flex-col gap-1 text-left">
+            <label className="font-semibold text-[1.125rem]" htmlFor="">
+              Name
+            </label>
+            <input
+              className="w-full h-16 rounded-md text-subTitleColor px-4"
+              type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="flex flex-col gap-1 text-left">
+            <label className="font-semibold text-[1.125rem]" htmlFor="">
+              Email
+            </label>
+            <input
+              className="w-full h-16 rounded-md text-subTitleColor px-4"
+              type="text"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="flex flex-col gap-1 text-left">
+            <label className="font-semibold text-[1.125rem]" htmlFor="">
+              Password
+            </label>
+            <input
+              className="w-full h-16 rounded-md text-subTitleColor px-4"
+              type="password"
+              name="password"
+              value={form.password}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="flex flex-col gap-1 text-left">
+            <label className="font-semibold text-[1.125rem]" htmlFor="">
+              Repeat password
+            </label>
+            <input
+              className="w-full h-16 rounded-md text-subTitleColor px-4"
+              type="password"
+              name="repeatPassword"
+              value={form.repeatPassword}
+              onChange={handleChange}
+            />
+          </div>
         </div>
-        <div>
-          <label htmlFor="">Email</label>
-          <input
-            type="text"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="">Password</label>
-          <input
-            type="password"
-            name="password"
-            value={form.password}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="">Repeat password</label>
-          <input
-            type="password"
-            name="repeatPassword"
-            value={form.repeatPassword}
-            onChange={handleChange}
-          />
-        </div>
-        <button>Create</button>
         <Link to="/dashboard">You already have account?</Link>
+        <button className="bg-buttonColor text-[1.5rem] font-semibold px-6 py-2 w-32 rounded-full">
+          Create
+        </button>
       </form>
     </section>
   );

@@ -3,6 +3,8 @@ import axios from "axios";
 import React, { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import { URl_BASE } from "../../utils/url";
+import Navigation from "../../components/Dashboard/Navigation/Navigation";
 
 const DashboardNewBlog = () => {
   const [data, setData] = useState({
@@ -20,7 +22,7 @@ const DashboardNewBlog = () => {
   };
   const token = localStorage.getItem("token");
   const handleSend = async () => {
-    const URL = "http://localhost:3001/posts";
+    const URL = `${URl_BASE}/posts`;
     if (data.text && data.card_text && data.card_title) {
       try {
         await axios
@@ -40,6 +42,7 @@ const DashboardNewBlog = () => {
 
   return (
     <div className="flex flex-col items-center gap-10 w-full">
+      <Navigation/>
       <input
         className="w-full h-[440px] bg-gray-300"
         type="file"
