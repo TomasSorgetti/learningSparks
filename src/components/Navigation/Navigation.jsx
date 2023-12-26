@@ -80,7 +80,7 @@ const Navigation = ({ t, i18n }) => {
           {links?.map(({ id, label, route }) => (
             <Link
               to={route}
-              className="hover:font-bold"
+              className={`${window.location.pathname === route && "font-bold"} hover:font-bold`}
               onClick={handleClick}
               key={id}
             >

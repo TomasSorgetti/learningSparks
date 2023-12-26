@@ -3,7 +3,8 @@ import {
   GET_USERS,
   GET_USER_BY_EMAIL,
   GET_USERS_ORDERED,
-  GET_POSTS,
+  SEARCH_POSTS,
+  GET_SUBJECTS,
 } from "./actionTypes";
 
 const URL_BASE = "http://localhost:3001";
@@ -80,14 +81,31 @@ export const getUsersOrdered = (prop,direction, token) => {
 
 
 
-export const getAllPosts = () => {
-  const URL = `${URL_BASE}/posts`;
+export const searchPosts = (partialTitle, subject) => {
+  const URL = `${URL_BASE}/posts?partialTitle=${partialTitle}&subj=${subject}`;
   return async (dispatch) => {
     await axios
       .get(URL)
       .then((response) => {
         dispatch({
-          type: GET_POSTS,
+          type: SEARCH_POSTS,
+          payload: response.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+};
+
+export const searchSubjects = () => {
+  const URL = `${URL_BASE}/subjects`;
+  return async (dispatch) => {
+    await axios
+      .get(URL)
+      .then((response) => {
+        dispatch({
+          type: GET_SUBJECTS,
           payload: response.data,
         });
       })

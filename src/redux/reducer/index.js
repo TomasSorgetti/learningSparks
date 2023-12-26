@@ -2,12 +2,14 @@ import {
   GET_USERS,
   GET_USER_BY_EMAIL,
   GET_USERS_ORDERED,
-  GET_POSTS,
+  SEARCH_POSTS,
+  GET_SUBJECTS,
 } from "../actions/actionTypes";
 
 const initialState = {
   users: [],
   posts: [],
+  subjects: [],
 
 };
 const rootReducer = (state = initialState, action) => {
@@ -18,8 +20,10 @@ const rootReducer = (state = initialState, action) => {
       return { ...state, users: action.payload };
     case GET_USERS_ORDERED:
       return { ...state, users: action.payload };
-    case GET_POSTS:
+    case SEARCH_POSTS:
       return { ...state, posts: action.payload };
+    case GET_SUBJECTS:
+      return { ...state, subjects: action.payload };
     default:
       return { ...state };
   }
