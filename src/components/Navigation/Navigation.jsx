@@ -5,40 +5,40 @@ import {Link} from "react-router-dom"
 // import english from "../../assets/Logo/english.png";
 const Navigation = ({ t, i18n }) => {
   const [nav, setNav] = useState(false);
-  const token = localStorage.getItem("token")
+  // const token = localStorage.getItem("token")
   const links = [
-    // {
-    //   id: 1,
-    //   label: t("Clases"),
-    //   route: "/#clases",
-    // },
-    // {
-    //   id: 2,
-    //   label: t("Nosotros"),
-    //   route: "/#nosotros",
-    // },
-    // {
-    //   id: 3,
-    //   label: t("Contactanos"),
-    //   route: "/#contactanos",
-    // },
     {
-      id: 4,
-      label: "Home",
-      route: "/",
+      id: 1,
+      label: t("Clases"),
+      route: "#clases",
     },
     {
-      id: 5,
-      label: "Blog",
-      route: "/blog",
+      id: 2,
+      label: t("Nosotros"),
+      route: "/#nosotros",
     },
+    {
+      id: 3,
+      label: t("Contactanos"),
+      route: "/#contactanos",
+    },
+    // {
+    //   id: 4,
+    //   label: "Home",
+    //   route: "/",
+    // },
+    // {
+    //   id: 5,
+    //   label: "Blog",
+    //   route: "/blog",
+    // },
   ];
   const handleClick = () => {
     setNav(!nav);
   };
-  const handleLogout = () => {
-    localStorage.removeItem("token")
-  };
+  // const handleLogout = () => {
+  //   localStorage.removeItem("token")
+  // };
   const changeLanguage = (e, prop) => {
     e.preventDefault();
     localStorage.setItem("lang", prop);
@@ -78,20 +78,20 @@ const Navigation = ({ t, i18n }) => {
           }`}
         >
           {links?.map(({ id, label, route }) => (
-            <Link
-              to={route}
+            <a
+              href={route}
               className={`${window.location.pathname === route && "font-bold"} hover:font-bold`}
               onClick={handleClick}
               key={id}
             >
               {label}
-            </Link>
+            </a>
           ))}
-          {typeof token === "string" ? (
+          {/* {typeof token === "string" ? (
             <button onClick={handleLogout}>Logout</button>
           ) : (
             <Link to="/login">Login</Link>
-          )}
+          )} */}
           <div className="flex gap-2 items-center">
             <button
               onClick={(e) => changeLanguage(e, "es")}

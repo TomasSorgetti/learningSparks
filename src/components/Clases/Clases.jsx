@@ -117,7 +117,7 @@ const Clases = ({ t }) => {
                 </h4>
               ) : (
                 <h4 className="font-poppins text-[32px] font-extrabold text-subTitleColor xl:text-[3rem]">
-                  $AR 15000
+                  $AR 20000
                 </h4>
               )}
               <p className="text-[20px] mb-[-5px] font-normal text-subTitleColor">
@@ -172,7 +172,7 @@ const Clases = ({ t }) => {
                   </h4>
                 ) : (
                   <h4 className="font-poppins text-[32px] font-extrabold xl:text-[3rem]">
-                    $AR 12000
+                    $AR 16000
                   </h4>
                 )}
                 <p className="text-[20px] mb-[-5px] font-normal">/h</p>
@@ -251,7 +251,7 @@ const Clases = ({ t }) => {
             </span>
           ) : (
             <span className="text-[2rem] text-white font-extrabold font-manrope bg-titleColor w-52 text-center px-1 py-2 rounded">
-              $AR 30000
+              $AR 40000
             </span>
           )}
         </div>
