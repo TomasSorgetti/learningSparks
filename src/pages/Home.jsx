@@ -10,19 +10,17 @@ import Footer from '../components/Footer/Footer';
 
 
 
-const Home = ({t, i18n}) => {
-    
-    
+const Home = ({ t, i18n, country }) => {
   return (
     <div>
       <Navigation t={t} i18n={i18n} />
       <Header t={t} />
-      <Clases t={t} />
+      <Clases t={t} country={country} />
       <About t={t} />
       <Contact t={t} />
       <Footer t={t} />
     </div>
   );
-}
+};
 
 export default Home

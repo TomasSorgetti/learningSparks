@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import Mobile from "../../assets/mobile/bookmobile.png";
 import book from "../../assets/desktop/book.png";
 import fondo from "../../assets/desktop/fondo.png";
@@ -9,35 +9,35 @@ import article2 from "../../assets/desktop/repaso.png";
 import linesCard from "../../assets/desktop/linesCard.png";
 import MobileSlider from "../Carousel/Mobile/MobileSlider";
 import DeskSlider from "../Carousel/Desktop/DeskSlider";
-import axios from "axios";
+// import axios from "axios";
 import { MdDone } from "react-icons/md";
-import { URl_BASE } from "../../utils/url";
+// import { URl_BASE } from "../../utils/url";
 
-const Clases = ({ t }) => {
+const Clases = ({ t, country }) => {
   const whatsapp = "5491139478794";
-  const [userData, setUserData] = useState({});
-  const postIp = async (ip) => {
-    try {
-      await axios.post(`${URl_BASE}/views/${ip}`);
-    } catch (error) {
-      console.log("error posting ip", error);
-    }
-  };
-  useEffect(() => {
-    const data = async () => {
-      try {
-        await axios.get("https://ipapi.co/json/").then((res) => {
-          if (res) {
-            setUserData(res.data);
-            postIp(res.data.ip);
-          }
-        });
-      } catch (error) {
-        console.log("error fetching ip api", error);
-      }
-    };
-    data();
-  }, []);
+  // const [userData, setUserData] = useState({});
+  // const postIp = async (ip) => {
+  //   try {
+  //     await axios.post(`${URl_BASE}/views/${ip}`);
+  //   } catch (error) {
+  //     console.log("error posting ip", error);
+  //   }
+  // };
+  // useEffect(() => {
+  //   const data = async () => {
+  //     try {
+  //       await axios.get("https://ipapi.co/json/").then((res) => {
+  //         if (res) {
+  //           setUserData(res.data);
+  //           // postIp(res.data.ip);
+  //         }
+  //       });
+  //     } catch (error) {
+  //       console.log("error fetching ip api", error);
+  //     }
+  //   };
+  //   data();
+  // }, []);
   return (
     <section
       id="clases"
@@ -111,7 +111,7 @@ const Clases = ({ t }) => {
               </p>
             </div>
             <div className="flex gap-1 items-center justify-center">
-              {userData.country_name !== "Argentina" ? (
+              {country !== "Argentina" ? (
                 <h4 className="text-[32px] font-extrabold text-subTitleColor xl:text-[3rem]">
                   $USD 45
                 </h4>
@@ -166,7 +166,7 @@ const Clases = ({ t }) => {
             </div>
             <div className="flex flex-col items-center justify-center">
               <div className="flex gap-1 items-center justify-center">
-                {userData.country_name !== "Argentina" ? (
+                {country !== "Argentina" ? (
                   <h4 className="font-poppins text-[32px] font-extrabold xl:text-[3rem]">
                     $USD 30
                   </h4>
@@ -245,7 +245,7 @@ const Clases = ({ t }) => {
           </p>
         </div>
         <div className="absolute bottom-5 w-full flex justify-center md:bottom-8 lg:bottom-[66%] lg:justify-end">
-          {userData.country_name !== "Argentina" ? (
+          {country !== "Argentina" ? (
             <span className="text-[2rem] text-white font-extrabold font-manrope bg-titleColor w-32 text-center px-1 py-2 rounded">
               80 USD
             </span>
